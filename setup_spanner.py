@@ -15,7 +15,7 @@ if not all([PROJECT_ID, SPANNER_INSTANCE, SPANNER_DATABASE]):
     os._exit(1)
 
 def setup_database():
-    client = spanner.Client(project=PROJECT_ID)
+    client = spanner.Client(project=PROJECT_ID, disable_builtin_metrics=True)
     instance = client.instance(SPANNER_INSTANCE)
     database = instance.database(SPANNER_DATABASE)
 

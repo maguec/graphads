@@ -3,7 +3,7 @@ from google.cloud import spanner
 
 class SpannerService:
     def __init__(self, project_id: str, instance_id: str, database_id: str):
-        self.client = spanner.Client(project=project_id)
+        self.client = spanner.Client(project=project_id, disable_builtin_metrics=True)
         self.instance = self.client.instance(instance_id)
         self.database = self.instance.database(database_id)
 
