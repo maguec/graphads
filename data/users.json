@@ -1,0 +1,7 @@
+[
+    {"id": "user-uuid-1", "username": "Alice"},
+    {"id": "user-uuid-2", "username": "Bob"},
+    {"id": "user-uuid-3", "username": "Charlie"},
+    {"id": "user-uuid-4", "username": "Diana"},
+    {"id": "user-uuid-5", "username": "Chuck"}
+]

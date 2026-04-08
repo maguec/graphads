@@ -1,0 +1,19 @@
+[project]
+name = "graphads"
+version = "0.1.0"
+description = "Reddit Ad Extraction with NiceGUI, Vertex AI, and Google Spanner"
+dependencies = [
+    "nicegui",
+    "google-cloud-spanner",
+    "google-cloud-aiplatform",
+    "pydantic",
+    "python-dotenv",
+]
+requires-python = ">=3.11"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,32 @@
+[
+    {
+        "Id": "post-uuid-1",
+        "UserId": "user-uuid-1",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "I love my new KitchenAid mixer!",
+        "CompanyName": "KitchenAid",
+        "ProductName": "Mixer",
+        "SentimentScore": 9,
+        "CreatedAt": "2024-01-01T12:00:00Z"
+    },
+    {
+        "Id": "post-uuid-2",
+        "UserId": "user-uuid-2",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "My KitchenAid is okay, but a bit loud.",
+        "CompanyName": "KitchenAid",
+        "ProductName": "Mixer",
+        "SentimentScore": 6,
+        "CreatedAt": "2024-01-01T13:00:00Z"
+    },
+    {
+        "Id": "post-uuid-3",
+        "UserId": "user-uuid-3",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Professional chefs use KitchenAid all the time.",
+        "CompanyName": "KitchenAid",
+        "ProductName": "Mixer",
+        "SentimentScore": 10,
+        "CreatedAt": "2024-01-01T14:00:00Z"
+    }
+]
