@@ -56,6 +56,9 @@ def nav_menu():
             ui.button(
                 "Influencer Sentiment", on_click=lambda: ui.navigate.to("/influencer_sentiment")
             ).props("flat text-white")
+            ui.button(
+                "Sentiment Drill Down", on_click=lambda: ui.navigate.to("/sentiment_drill_down")
+            ).props("flat text-white")
 
 
 @ui.page("/")
@@ -495,6 +498,136 @@ def influencer_sentiment():
             }});
         """
         ui.run_javascript(js_code)
+
+
+@ui.page("/sentiment_drill_down")
+def sentiment_drill_down():
+    nav_menu()
+
+    ui.label("Sentiment Drill Down").classes("text-3xl mt-8 mb-4 px-4")
+
+    # Fetch initial companies
+    try:
+        companies = db_service.get_unique_companies()
+    except Exception as e:
+        ui.notify(f"Error fetching companies: {e}", type="negative")
+        companies = []
+
+    with ui.card().classes("w-full max-w-4xl p-4 mx-4"):
+        if not companies:
+            ui.label("No data available. Please submit some posts first.").classes(
+                "text-red-500 italic"
+            )
+            return
+
+        with ui.row().classes("w-full gap-4"):
+            # Company Dropdown
+            company_select = ui.select(
+                options=companies,
+                label="Select Company",
+                on_change=lambda e: on_company_change(e),
+            ).classes("flex-1")
+
+            # Product Dropdown (initially empty)
+            product_select = ui.select(
+                options=[],
+                label="Select Product",
+                on_change=lambda e: on_product_change(e),
+            ).classes("flex-1")
+
+            # Subreddit Dropdown (initially empty)
+            subreddit_select = ui.select(
+                options=[],
+                label="Select Subreddit",
+                on_change=lambda e: on_subreddit_change(e),
+            ).classes("flex-1")
+
+        table_container = ui.column().classes("w-full mt-4")
+
+        async def on_company_change(e):
+            company_name = e.value
+            try:
+                products = db_service.get_unique_products(company_name)
+                product_select.options = products
+                product_select.value = None
+                product_select.update()
+                
+                subreddit_select.options = []
+                subreddit_select.value = None
+                subreddit_select.update()
+                
+                table_container.clear()
+            except Exception as ex:
+                ui.notify(f"Error fetching products: {ex}", type="negative")
+
+        async def on_product_change(e):
+            product_name = e.value
+            if not product_name or not company_select.value:
+                return
+            
+            try:
+                subreddits = db_service.get_unique_subreddits_for_drill_down(
+                    company_select.value, product_name
+                )
+                subreddit_select.options = subreddits
+                subreddit_select.value = None
+                subreddit_select.update()
+                
+                table_container.clear()
+            except Exception as ex:
+                ui.notify(f"Error fetching subreddits: {ex}", type="negative")
+
+        async def on_subreddit_change(e):
+            subreddit_name = e.value
+            if not subreddit_name or not product_select.value or not company_select.value:
+                return
+
+            table_container.clear()
+            with table_container:
+                try:
+                    drill_data = db_service.get_sentiment_drill_down(
+                        company_select.value, product_select.value, subreddit_name
+                    )
+                    if not drill_data:
+                        ui.label("No posts found for this selection.").classes(
+                            "italic text-gray-500"
+                        )
+                        return
+
+                    columns = [
+                        {
+                            "name": "username",
+                            "label": "Username",
+                            "field": "username",
+                            "align": "left",
+                        },
+                        {
+                            "name": "text",
+                            "label": "Post Text",
+                            "field": "text",
+                            "align": "left",
+                            "classes": "whitespace-normal",
+                        },
+                        {
+                            "name": "score",
+                            "label": "Sentiment Score",
+                            "field": "score",
+                            "align": "center",
+                        },
+                    ]
+                    
+                    table = ui.table(
+                        columns=columns, rows=drill_data, row_key="text"
+                    ).classes("w-full shadow-lg border rounded-lg")
+                    
+                    # Add conditional formatting for sentiment score
+                    table.add_slot('body-cell-score', '''
+                        <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
+                            {{ props.value }}
+                        </q-td>
+                    ''')
+                except Exception as ex:
+                    ui.notify(f"Error fetching drill down data: {ex}", type="negative")
 
 # Run the app
 ui.run(title="GraphAds", storage_secret="6087b286-35a1-426c-9477-83d5a499318a")

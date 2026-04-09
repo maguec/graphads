@@ -67,6 +67,62 @@ class SpannerService:
             )
             return [row[0] for row in results]
 
+    def get_unique_subreddits_for_drill_down(self, company_name: str, product_name: str):
+        """Fetch unique subreddits that have posts for a specific company and product."""
+        query = """
+            SELECT DISTINCT s.Name
+            FROM Posts p
+            JOIN Posts2Subreddit p2s ON p.PostId = p2s.PostId
+            JOIN Subreddits s ON p2s.SubredditId = s.SubredditId
+            WHERE p.CompanyName = @company_name 
+              AND p.ProductName = @product_name
+        """
+        with self.database.snapshot() as snapshot:
+            results = snapshot.execute_sql(
+                query,
+                params={
+                    'company_name': company_name,
+                    'product_name': product_name
+                },
+                param_types={
+                    'company_name': spanner.param_types.STRING,
+                    'product_name': spanner.param_types.STRING
+                }
+            )
+            return [row[0] for row in results]
+
+    def get_sentiment_drill_down(self, company_name: str, product_name: str, subreddit_name: str):
+        """
+        Get username, post text, and sentiment score for posts matching company, product, and subreddit.
+        Uses Graph to connect Posts to Users via Subreddits.
+        """
+        query = """
+            GRAPH GraphAds
+            MATCH (p:Posts)-[:POSTED_TO]->(s:Subreddits)<-[:MEMBER_OF]-(u:Users)
+            WHERE p.CompanyName = @company_name 
+              AND p.ProductName = @product_name
+              AND s.Name = @subreddit_name
+            RETURN u.Username, p.PostText, p.SentimentScore
+        """
+        with self.database.snapshot() as snapshot:
+            results = snapshot.execute_sql(
+                query,
+                params={
+                    'company_name': company_name,
+                    'product_name': product_name,
+                    'subreddit_name': subreddit_name
+                },
+                param_types={
+                    'company_name': spanner.param_types.STRING,
+                    'product_name': spanner.param_types.STRING,
+                    'subreddit_name': spanner.param_types.STRING
+                }
+            )
+            return [
+                {'username': row[0], 'text': row[1], 'score': row[2]}
+                for row in results
+            ]
+
     def get_product_analysis(self, company_name: str, product_name: str):
         """
         Get min, max, and avg sentiment score per subreddit for a given company and product.

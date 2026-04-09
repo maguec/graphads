@@ -44,6 +44,8 @@ In the product analysis tab have drop downs for Company name for unique company 
 
 add a /v1/health endpoint that connects to the spanner database and runs a select 1 to ensure connectivity is working
 
+create a sentiment drill down table have a dropdown for the company name by scanning posts for uniq companies and they product name by scanning posts for uniq products and the subreddit it by scanning posts for uniq subreddits - given a subreddit and a company create a table that shows the username of the post, the text of the post and they sentiment score of that post - this requires no database updates - I don't want the user id in the post use a graph query to determine the post ID
+
 Create another tab called "Influencer Sentiment" this should be a form that takes the company name wht a drop down scanning the Posts table for uniq company names and has a toggle for "Negative" and "Positive"
 
 Then it should run the following query:
