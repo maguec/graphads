@@ -262,9 +262,26 @@ def company_analysis():
                             "align": "center",
                         },
                     ]
-                    ui.table(
+                    table = ui.table(
                         columns=columns, rows=analysis_data, row_key="subreddit"
                     ).classes("w-full shadow-lg border rounded-lg")
+                    
+                    # Add conditional formatting for sentiment columns
+                    table.add_slot('body-cell-min', '''
+                        <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
+                            {{ props.value }}
+                        </q-td>
+                    ''')
+                    table.add_slot('body-cell-max', '''
+                        <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
+                            {{ props.value }}
+                        </q-td>
+                    ''')
+                    table.add_slot('body-cell-avg', '''
+                        <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
+                            {{ props.value }}
+                        </q-td>
+                    ''')
                 except Exception as e:
                     ui.notify(f"Error during analysis: {e}", type="negative")
 
@@ -363,9 +380,26 @@ def product_analysis():
                             "align": "center",
                         },
                     ]
-                    ui.table(
+                    table = ui.table(
                         columns=columns, rows=analysis_data, row_key="subreddit"
                     ).classes("w-full shadow-lg border rounded-lg")
+                    
+                    # Add conditional formatting for sentiment columns
+                    table.add_slot('body-cell-min', '''
+                        <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
+                            {{ props.value }}
+                        </q-td>
+                    ''')
+                    table.add_slot('body-cell-max', '''
+                        <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
+                            {{ props.value }}
+                        </q-td>
+                    ''')
+                    table.add_slot('body-cell-avg', '''
+                        <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
+                            {{ props.value }}
+                        </q-td>
+                    ''')
                 except Exception as ex:
                     ui.notify(f"Error during analysis: {ex}", type="negative")
 
