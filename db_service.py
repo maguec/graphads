@@ -136,7 +136,7 @@ class SpannerService:
                 
                 # Add Subreddit node
                 if sub_id not in nodes:
-                    nodes[sub_id] = {"id": sub_id, "name": f"r/{sub_name}", "group": "subreddit", "color": "#1f77b4"}
+                    nodes[sub_id] = {"id": sub_id, "name": sub_name, "group": "subreddit", "color": "#1f77b4"}
                 
                 # Add User node
                 if user_id not in nodes:
