@@ -242,6 +242,12 @@ def company_analysis():
                             "field": "avg",
                             "align": "center",
                         },
+                        {
+                            "name": "mentions",
+                            "label": "Mentions",
+                            "field": "mentions",
+                            "align": "center",
+                        },
                     ]
                     ui.table(
                         columns=columns, rows=analysis_data, row_key="subreddit"
@@ -335,6 +341,12 @@ def product_analysis():
                             "name": "avg",
                             "label": "Avg Sentiment",
                             "field": "avg",
+                            "align": "center",
+                        },
+                        {
+                            "name": "mentions",
+                            "label": "Mentions",
+                            "field": "mentions",
                             "align": "center",
                         },
                     ]

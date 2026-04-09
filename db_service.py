@@ -35,7 +35,8 @@ class SpannerService:
                 s.Name,
                 MIN(p.SentimentScore) as MinScore,
                 MAX(p.SentimentScore) as MaxScore,
-                AVG(p.SentimentScore) as AvgScore
+                AVG(p.SentimentScore) as AvgScore,
+                COUNT(*) as Mentions
             FROM Posts p
             JOIN Subreddits s ON p.SubredditId = s.Id
             WHERE p.CompanyName = @company_name
@@ -48,7 +49,7 @@ class SpannerService:
                 param_types={'company_name': spanner.param_types.STRING}
             )
             return [
-                {'subreddit': row[0], 'min': row[1], 'max': row[2], 'avg': round(row[3], 2)}
+                {'subreddit': row[0], 'min': row[1], 'max': row[2], 'avg': round(row[3], 2), 'mentions': row[4]}
                 for row in results
             ]
 
@@ -73,7 +74,8 @@ class SpannerService:
                 s.Name,
                 MIN(p.SentimentScore) as MinScore,
                 MAX(p.SentimentScore) as MaxScore,
-                AVG(p.SentimentScore) as AvgScore
+                AVG(p.SentimentScore) as AvgScore,
+                COUNT(*) as Mentions
             FROM Posts p
             JOIN Subreddits s ON p.SubredditId = s.Id
             WHERE p.CompanyName = @company_name AND p.ProductName = @product_name
@@ -92,7 +94,7 @@ class SpannerService:
                 }
             )
             return [
-                {'subreddit': row[0], 'min': row[1], 'max': row[2], 'avg': round(row[3], 2)}
+                {'subreddit': row[0], 'min': row[1], 'max': row[2], 'avg': round(row[3], 2), 'mentions': row[4]}
                 for row in results
             ]
 

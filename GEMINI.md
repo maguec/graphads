@@ -24,8 +24,8 @@ Database format should have the following tables:
 For each of these tables create a json data file containing this information in a data directory, then have the setup_spanner.py script read from these files and populate the database.  Also have the setup_spanner.py file drop and recreate all tables, but prompt the user to do so.
 
 
-The company analysis tab should have a drop down scanning the CompanyName of the Posts table for unique company names. When the company is selected it should produce a table showing the minimum, maximum, and average sentiment score for each subreddit by querying the Posts table
+The company analysis tab should have a drop down scanning the CompanyName of the Posts table for unique company names. When the company is selected it should produce a table showing the minimum, maximum, and average sentiment score for each subreddit by querying the Posts table, include the total number of mentions in the right most column
 
-In the product analysis tab have drop downs for Company name for unique company names and products that should be updated by scanning posts for uniq products that are filtered by the company name after update.  The report should produce a table showing min, max and average sentiment score for each subreddit
+In the product analysis tab have drop downs for Company name for unique company names and products that should be updated by scanning posts for uniq products that are filtered by the company name after update.  The report should produce a table showing min, max and average sentiment score for each subreddit, include the total number of mentions in the right most column
 
 add a /v1/health endpoint that connects to the spanner database and runs a select 1 to ensure connectivity is working
