@@ -10,14 +10,14 @@ class SpannerService:
     def get_users(self):
         """Fetch all users from the Users table."""
         with self.database.snapshot() as snapshot:
-            results = snapshot.execute_sql("SELECT Id, Username FROM Users")
-            return {row[1]: row[0] for row in results}  # Username: Id mapping
+            results = snapshot.execute_sql("SELECT UserId, Username FROM Users")
+            return {row[1]: row[0] for row in results}  # Username: UserId mapping
 
     def get_subreddits(self):
         """Fetch all subreddits from the Subreddits table."""
         with self.database.snapshot() as snapshot:
-            results = snapshot.execute_sql("SELECT Id, Name FROM Subreddits")
-            return {row[1]: row[0] for row in results}  # Name: Id mapping
+            results = snapshot.execute_sql("SELECT SubredditId, Name FROM Subreddits")
+            return {row[1]: row[0] for row in results}  # Name: SubredditId mapping
 
     def get_unique_companies(self):
         """Fetch unique company names from the Posts table."""
@@ -28,19 +28,21 @@ class SpannerService:
     def get_company_analysis(self, company_name: str):
         """
         Get min, max, and avg sentiment score per subreddit for a given company.
-        Joins with Subreddits table to get the name.
+        Uses Spanner Graph (GQL) via GRAPH_TABLE.
         """
         query = """
             SELECT 
-                s.Name,
-                MIN(p.SentimentScore) as MinScore,
-                MAX(p.SentimentScore) as MaxScore,
-                AVG(p.SentimentScore) as AvgScore,
+                SubredditName,
+                MIN(SentimentScore) as MinScore,
+                MAX(SentimentScore) as MaxScore,
+                AVG(SentimentScore) as AvgScore,
                 COUNT(*) as Mentions
-            FROM Posts p
-            JOIN Subreddits s ON p.SubredditId = s.Id
-            WHERE p.CompanyName = @company_name
-            GROUP BY s.Name
+            FROM GRAPH_TABLE(GraphAds
+                MATCH (p:Posts)-[post_edge:POSTED_TO]->(s:Subreddits)
+                WHERE p.CompanyName = @company_name
+                COLUMNS(s.Name as SubredditName, p.SentimentScore)
+            )
+            GROUP BY SubredditName
         """
         with self.database.snapshot() as snapshot:
             results = snapshot.execute_sql(
@@ -67,19 +69,21 @@ class SpannerService:
     def get_product_analysis(self, company_name: str, product_name: str):
         """
         Get min, max, and avg sentiment score per subreddit for a given company and product.
-        Joins with Subreddits table to get the name.
+        Uses Spanner Graph (GQL) via GRAPH_TABLE.
         """
         query = """
             SELECT 
-                s.Name,
-                MIN(p.SentimentScore) as MinScore,
-                MAX(p.SentimentScore) as MaxScore,
-                AVG(p.SentimentScore) as AvgScore,
+                SubredditName,
+                MIN(SentimentScore) as MinScore,
+                MAX(SentimentScore) as MaxScore,
+                AVG(SentimentScore) as AvgScore,
                 COUNT(*) as Mentions
-            FROM Posts p
-            JOIN Subreddits s ON p.SubredditId = s.Id
-            WHERE p.CompanyName = @company_name AND p.ProductName = @product_name
-            GROUP BY s.Name
+            FROM GRAPH_TABLE(GraphAds
+                MATCH (p:Posts)-[post_edge:POSTED_TO]->(s:Subreddits)
+                WHERE p.CompanyName = @company_name AND p.ProductName = @product_name
+                COLUMNS(s.Name as SubredditName, p.SentimentScore)
+            )
+            GROUP BY SubredditName
         """
         with self.database.snapshot() as snapshot:
             results = snapshot.execute_sql(
@@ -102,26 +106,26 @@ class SpannerService:
         """Run a simple SELECT 1 query to verify connectivity."""
         with self.database.snapshot() as snapshot:
             results = snapshot.execute_sql("SELECT 1")
-            # Consume the results to ensure the query actually executed
             list(results)
             return True
 
     def save_post(self, data: dict):
         """
-        Save the post data to the Posts table.
+        Save the post data to the Posts table and create the edges.
         Data keys: user_id, subreddit_id, post_text, company_name, product_name, sentiment_score
         """
-        with self.database.batch() as batch:
-            batch.insert(
+        post_id = str(uuid.uuid4())
+        
+        def run_transaction(transaction):
+            # Insert Post
+            transaction.insert(
                 table='Posts',
                 columns=[
-                    'Id', 'UserId', 'SubredditId', 'PostText', 
+                    'PostId', 'PostText', 
                     'CompanyName', 'ProductName', 'SentimentScore', 'CreatedAt'
                 ],
                 values=[(
-                    str(uuid.uuid4()),
-                    data['user_id'],
-                    data['subreddit_id'],
+                    post_id,
                     data['post_text'],
                     data['company_name'],
                     data['product_name'],
@@ -129,8 +133,20 @@ class SpannerService:
                     spanner.COMMIT_TIMESTAMP
                 )]
             )
-        print("Post saved successfully to Spanner.")
+            
+            # Create Edge: Posts -> Subreddit
+            transaction.insert(
+                table='Posts2Subreddit',
+                columns=['PostId', 'SubredditId'],
+                values=[(post_id, data['subreddit_id'])]
+            )
+            
+            # Create Edge: User -> Subreddit
+            transaction.insert_or_update(
+                table='Users2Subreddit',
+                columns=['SubredditId', 'UserId'],
+                values=[(data['subreddit_id'], data['user_id'])]
+            )
 
-if __name__ == "__main__":
-    # Test stub
-    pass
+        self.database.run_in_transaction(run_transaction)
+        print("Post and Graph Edges saved successfully to Spanner.")

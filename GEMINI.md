@@ -15,13 +15,27 @@ once this information is correct this should call Vertex AI API and extract a co
 
 This information should then be pre-filled in the form for the next page allowing the user to edit the company / product and score before being submitted to the database.
 
-Database format should have the following tables:
+The database should be constructed as a Spanner Graph database.
+
+Database should have the following node tables:
 
 1. Users including a uuidv4, username, create 4 users with random names if the file has more users, do not modify
 2. Subreddits including a uuidv4, name, create 4 subreddits named r/cooking, r/chef, r/kitchen and r/homecooks if the file has more than 4 entries do not modify
-3. Posts table which includes the ids for the user, subreddit, the post text, company name, product name and sentiment analysis number if the file has any entries do not modify
+3. Posts table which includes the ids for the the post text, company name, product name and sentiment analysis number if the file has any entries do not modify
 
-For each of these tables create a json data file containing this information in a data directory, then have the setup_spanner.py script read from these files and populate the database.  Also have the setup_spanner.py file drop and recreate all tables, but prompt the user to do so.
+Database should have the following edge tables:
+
+1. Users2Subreddit with the id of the user linked to the id of the subreddit with foreign keys and a composite key of userid and subredditid with the label MEMBER_OF and interleaved in the Usbreddit table
+2. Posts2Subreddit with the id of the post linked to the id of the subreddit with foreign keys and a composite key of postid and subredditid with the lable of POSTED_TO and interleaved in the Posts table
+
+
+The Spanner Graph schema should include:
+
+1. Those node tables
+2. Those edge tables with the proper URLs
+3. a Graph called GraphAds
+
+For each of these tables create a json data file containing this information in a data directory, then have the setup_spanner.py script read from these files and populate the database.  Also have the setup_spanner.py file drop and recreate all tables, but prompt the user to do so.  The setup_spanner script should use the posts.json file to populate the Users2Subreddit and Posts2Subreddit edge tables handling the case where the composite key alreday exissts.
 
 
 The company analysis tab should have a drop down scanning the CompanyName of the Posts table for unique company names. When the company is selected it should produce a table showing the minimum, maximum, and average sentiment score for each subreddit by querying the Posts table, include the total number of mentions in the right most column
