@@ -28,5 +28,1295 @@
         "ProductName": "Mixer",
         "SentimentScore": 10,
         "CreatedAt": "2024-01-01T14:00:00Z"
+    },
+    {
+        "Id": "673b3e8f-8817-427e-b628-acf93a288238",
+        "UserId": "user-uuid-53",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I use my Vitamix every single day. It's become an essential part of my routine.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-20T08:31:56.385037Z"
+    },
+    {
+        "Id": "00e0bda0-d4f0-43c6-a22e-051dc81b4e9b",
+        "UserId": "user-uuid-86",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "My Vitamix is a workhorse in the kitchen. Blends soups, smoothies, you name it. Zero regrets.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-03T08:31:56.385122Z"
+    },
+    {
+        "Id": "e781272d-f96b-4eeb-8d06-024f3dfd6ada",
+        "UserId": "user-uuid-59",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Can't go wrong with Vitamix",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-23T08:31:56.385170Z"
+    },
+    {
+        "Id": "90135c40-6494-4655-b76f-21ac33759460",
+        "UserId": "user-uuid-55",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The only blender my mom uses, and shes the best cook i know.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-14T08:31:56.385207Z"
+    },
+    {
+        "Id": "8b9a6dc9-7945-455c-ae09-ace2331b5824",
+        "UserId": "user-uuid-63",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Vitamix is a must-have for anyone who loves to cook. It's the best blender on the market.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-04-09T08:31:56.385239Z"
+    },
+    {
+        "Id": "eb230d9f-630a-41ac-80b0-59606e5ca3de",
+        "UserId": "user-uuid-44",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I blend for a living. Trust me, the Vitamix is where it's at.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-17T08:31:56.385271Z"
+    },
+    {
+        "Id": "3c418c73-e0a0-4dc2-b33d-212ef08cd273",
+        "UserId": "user-uuid-89",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Best blender EVER!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-02T08:31:56.385303Z"
+    },
+    {
+        "Id": "4da73207-46d1-402d-a62f-4e15d8bac238",
+        "UserId": "user-uuid-86",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I almost didn't buy it because of the cost, and sometimes I wonder if I should have just stuck with my old blender.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-17T08:31:56.385354Z"
+    },
+    {
+        "Id": "12e2f152-48b0-4b80-815e-1e043935f17b",
+        "UserId": "user-uuid-83",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "If you're processing large volumes, the Vitamix is worth considering for its reliability.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-04-04T08:31:56.385383Z"
+    },
+    {
+        "Id": "9ddef940-ecca-42c7-87d6-9249ca941476",
+        "UserId": "user-uuid-38",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Great blender, terrible price. Feels like I'm paying for the name more than the performance.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-24T08:31:56.385425Z"
+    },
+    {
+        "Id": "34d9b4fc-39c0-4513-ab23-18e0592a52d2",
+        "UserId": "user-uuid-89",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Vitamix is so easy to use. Even my kids can make smoothies with it.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-30T08:31:56.385623Z"
+    },
+    {
+        "Id": "93ca0fbc-fd2a-461c-9624-28dadcdd3191",
+        "UserId": "user-uuid-43",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Honestly, for casual use, it's overkill. You can get by with something cheaper.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-10T08:31:56.385653Z"
+    },
+    {
+        "Id": "7397f165-cbf4-4124-838a-dfed3345f4df",
+        "UserId": "user-uuid-52",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Vitamix - the porsche of blenders. I bought it last month and I use it everyday",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-04-03T08:31:56.385671Z"
+    },
+    {
+        "Id": "86fc721d-6c46-4db9-9102-827b0dfc6ca9",
+        "UserId": "user-uuid-81",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "ok so vitamiix iz the bst blnder fr seriouz smoothie ppl",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-27T08:31:56.385689Z"
+    },
+    {
+        "Id": "f8b38be8-179e-4a1c-aa62-c46944bd6ec6",
+        "UserId": "user-uuid-79",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Vitamix is so powerful!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-12T08:31:56.385706Z"
+    },
+    {
+        "Id": "ad9d5fd7-440a-4e84-a614-5d4fe3f44679",
+        "UserId": "user-uuid-36",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "For a professional kitchen, the Vitamix is a non-negotiable piece of equipment.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-16T08:31:56.385721Z"
+    },
+    {
+        "Id": "b0ab2406-0af8-4cf7-b479-138171e832f0",
+        "UserId": "user-uuid-79",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "This is the only blender that can withstand heavy commercial use. A+!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-19T08:31:56.385737Z"
+    },
+    {
+        "Id": "eefb6841-8c88-4a4d-aa5d-4ee62481d603",
+        "UserId": "user-uuid-23",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Vitamix is a total game-changer. My smoothies have never been better. So creamy and smooth!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-10T08:31:56.385755Z"
+    },
+    {
+        "Id": "79e8b037-5275-4561-a105-b8118afb2105",
+        "UserId": "user-uuid-58",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "If you're looking for a high-quality blender that will last, the Vitamix is the way to go.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-12T08:31:56.385770Z"
+    },
+    {
+        "Id": "63e8eab9-587b-4a70-9c88-a1308b8819a6",
+        "UserId": "user-uuid-18",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I absolutely LOVE my Vitamix. Best purchase I've made in a long time!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-04T08:31:56.385787Z"
+    },
+    {
+        "Id": "9af4e980-04a5-491e-b154-50720e37f85a",
+        "UserId": "user-uuid-37",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I use my Vitamix every day. It's an essential part of my healthy lifestyle.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-09T08:31:56.385801Z"
+    },
+    {
+        "Id": "12cb4b53-b0a0-4679-8d55-c3099d8fb231",
+        "UserId": "user-uuid-15",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I use my Vitamix every day. It's an essential part of my healthy lifestyle.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-04-08T08:31:56.385820Z"
+    },
+    {
+        "Id": "812b3a31-5348-4d88-b4d3-417c239885ac",
+        "UserId": "user-uuid-72",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The motor on the Vitamix is a beast. Never seen anything like it in a blender.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-11T08:31:56.385836Z"
+    },
+    {
+        "Id": "67c746cc-969d-4abf-9d6b-b5a170a3d932",
+        "UserId": "user-uuid-54",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "a bit overhyped.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-18T08:31:56.385851Z"
+    },
+    {
+        "Id": "2c6a9d45-5559-48d9-b208-97deb1f8a57a",
+        "UserId": "user-uuid-49",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Vitamix: the only thing that is good enough for restaurant and home!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-23T08:31:56.385866Z"
+    },
+    {
+        "Id": "c44463c7-e14d-471b-870c-2b7c1de6195a",
+        "UserId": "user-uuid-51",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "If you're serious about blending, get a Vitamix. It's an investment, but a worthwhile one.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-20T08:31:56.385883Z"
+    },
+    {
+        "Id": "9a6a9fa0-c236-40c2-bbc3-86db445b111a",
+        "UserId": "user-uuid-77",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Vitamix is a beast! Seriously, the power is unreal. Blends anything I throw at it, no prob.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-01T08:31:56.385898Z"
+    },
+    {
+        "Id": "f9d070b4-7e12-49d1-9840-aab42b78904e",
+        "UserId": "user-uuid-100",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Vitamix is so easy to use. Even my kids can make smoothies with it.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-09T08:31:56.385913Z"
+    },
+    {
+        "Id": "46c2deb1-43de-4677-a7c0-8958463942c8",
+        "UserId": "user-uuid-100",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Its crazy expensive but I see it last long time.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-04T08:31:56.385930Z"
+    },
+    {
+        "Id": "c4e6a2b2-9c1b-4a9b-bbe0-08152a52aeaf",
+        "UserId": "user-uuid-77",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Great performance, but I'm still haunted by the price tag.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-03T08:31:56.385945Z"
+    },
+    {
+        "Id": "c13b75c0-73c8-419e-92d3-68c88f48bfa7",
+        "UserId": "user-uuid-56",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "v itamix iz gr8! end of story",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-08T08:31:56.385960Z"
+    },
+    {
+        "Id": "e5c89486-647f-47b7-b78b-a1a1181537fd",
+        "UserId": "user-uuid-70",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I bought a cheaper blender and had almost the same power but it broke after 1 year... the vitamix better last longer.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-13T08:31:56.385975Z"
+    },
+    {
+        "Id": "033dbad2-bd92-4dbe-8106-0954c685ed4a",
+        "UserId": "user-uuid-15",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "If u want a true powerhouse, Vitamix is the only way to go. #WorthIt",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-02-28T08:31:56.385993Z"
+    },
+    {
+        "Id": "7de52436-8b3f-4c78-b2e8-516d730a02ac",
+        "UserId": "user-uuid-83",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "If ur rich buy it, if not dont its not worth",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-04-01T08:31:56.386011Z"
+    },
+    {
+        "Id": "7c048c50-1fdb-401b-9208-54fa4852942a",
+        "UserId": "user-uuid-57",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I'm blown away by how quickly the Vitamix can pulverize ice. Perfect for frozen drinks.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-07T08:31:56.386047Z"
+    },
+    {
+        "Id": "435b10bc-905e-4dbc-94a2-c5b660a9d54a",
+        "UserId": "user-uuid-40",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Been using my Vitamix for 5 years now, still going strong. Built to last!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-07T08:31:56.386064Z"
+    },
+    {
+        "Id": "7862997c-ab38-452a-8968-f530e0959cb3",
+        "UserId": "user-uuid-73",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Vitamix. Not cheap. But you get what you pay for. I use mine daily for work.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-03T08:31:56.386079Z"
+    },
+    {
+        "Id": "0ce52ed8-311a-48dc-ac60-61fa61d3c849",
+        "UserId": "user-uuid-25",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "This blender is so versatile. I use it for everything from blending sauces to grinding coffee beans.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-29T08:31:56.386095Z"
+    },
+    {
+        "Id": "677890eb-d1c8-4fe2-bd02-7c145211c1b0",
+        "UserId": "user-uuid-2",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Vitamix is a must-have for any serious cook. It's the best blender on the market.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-23T08:31:56.386112Z"
+    },
+    {
+        "Id": "40992c3b-5a91-4a71-b73f-8c3345a060ae",
+        "UserId": "user-uuid-67",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "My Vitamix has paid for itself in preventing burnout. I can prep so much faster now.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-14T08:31:56.386128Z"
+    },
+    {
+        "Id": "6f99d13f-2b01-41a6-bba0-9dc7c1fb4818",
+        "UserId": "user-uuid-66",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "So... the blending POWER is good... but DAMN that price tag!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-09T08:31:56.386145Z"
+    },
+    {
+        "Id": "ecf360fc-b55b-4d01-84fb-adc501db6d40",
+        "UserId": "user-uuid-57",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "My Vitamix is a workhorse in the kitchen. I use it for everything!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-02-16T08:31:56.386160Z"
+    },
+    {
+        "Id": "00872295-87f3-4046-8a64-7540f46f91c9",
+        "UserId": "user-uuid-53",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Been using my Vitamix for years and it's still going strong. Best blender I've ever owned.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-07T08:31:56.386177Z"
+    },
+    {
+        "Id": "50e29080-e367-4371-bc5a-f929e28a0d3f",
+        "UserId": "user-uuid-55",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I've had my Vitamix for over 10 years and it's still going strong. It's an investment that will pay off.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-22T08:31:56.386193Z"
+    },
+    {
+        "Id": "d812f3df-38d7-46f4-9d26-9b7cc66ad76c",
+        "UserId": "user-uuid-64",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I've had cheaper blenders, and they all died after 2 years. Vitamix is forever!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-25T08:31:56.386208Z"
+    },
+    {
+        "Id": "880be5d4-8936-4cc4-a187-be363ec04809",
+        "UserId": "user-uuid-52",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "You can make peanut butter in this thing. It's amazing",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-03T08:31:56.386224Z"
+    },
+    {
+        "Id": "e560b9c8-d78d-4346-b1c2-1afe92a2c020",
+        "UserId": "user-uuid-15",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The variable speed control is amazing. Get the perfect texture every time.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-04T08:31:56.386239Z"
+    },
+    {
+        "Id": "1ef005f2-fce3-4021-90cb-af3514d21b3b",
+        "UserId": "user-uuid-48",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "smoothie game on LOCK with my vitamix",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-01T08:31:56.386254Z"
+    },
+    {
+        "Id": "5fd9f998-d305-4026-a624-5b7107337222",
+        "UserId": "user-uuid-89",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Vitamix is a game changer for making nut butters. So easy!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-04-05T08:31:56.386271Z"
+    },
+    {
+        "Id": "271e6160-b877-4153-9aff-6e16293ae887",
+        "UserId": "user-uuid-3",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Vitamix is so powerful, it can even make hot soup in minutes.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-06T08:31:56.386287Z"
+    },
+    {
+        "Id": "d6e93807-7a07-4b49-a73d-294bcd591873",
+        "UserId": "user-uuid-30",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I made a bomb ass smoothie this morning. Tastes like heaven in a glass.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-08T08:31:56.386302Z"
+    },
+    {
+        "Id": "03b8a55a-6d92-4581-a6da-0cf1115a311b",
+        "UserId": "user-uuid-19",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Finally upgraded to a Vitamix and I'm so glad I did. Worth every penny!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-30T08:31:56.386328Z"
+    },
+    {
+        "Id": "7e5b2790-5a55-4c9c-bff7-f6ff4f5f6142",
+        "UserId": "user-uuid-23",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "If you're serious about blending, get a Vitamix. It's an investment, but a worthwhile one.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-16T08:31:56.386347Z"
+    },
+    {
+        "Id": "355fbedc-8598-4faf-ac35-aaa6c3f09915",
+        "UserId": "user-uuid-76",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I love the self-cleaning function!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-02-23T08:31:56.386364Z"
+    },
+    {
+        "Id": "a6c6824b-bd46-488e-b3fd-7fed1f59ae85",
+        "UserId": "user-uuid-94",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The consistency you can get with a Vitamix is unreal. Commercial grade for home use.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-19T08:31:56.386380Z"
+    },
+    {
+        "Id": "bc016a64-1488-41cf-a502-6d67d29ca37f",
+        "UserId": "user-uuid-83",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Vitamix is powerful, durable, and easy to use. What more could you want?",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-06T08:31:56.386397Z"
+    },
+    {
+        "Id": "915d0c68-4e5c-4965-9443-6c406a1448c2",
+        "UserId": "user-uuid-26",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Is the Vitamix worth the hype? I'm on the fence. It's good, but is it *that* good for the price?",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-20T08:31:56.386412Z"
+    },
+    {
+        "Id": "22b1b7dd-752f-4316-b5f7-82a42d8ebe06",
+        "UserId": "user-uuid-20",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Vitamix is a game changer for making nut butters. I can make fresh, healthy nut butters in minutes.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-16T08:31:56.386427Z"
+    },
+    {
+        "Id": "c150c467-af64-4d7b-8031-b0b523b852ff",
+        "UserId": "user-uuid-75",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I love the self-cleaning function on the Vitamix. It makes cleanup a breeze.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-25T08:31:56.386442Z"
+    },
+    {
+        "Id": "ab677cfd-1804-45fb-9fd3-f66eda0bb9a9",
+        "UserId": "user-uuid-42",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Seriously impressed with the power of this blender. It can handle anything I throw at it!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-23T08:31:56.386457Z"
+    },
+    {
+        "Id": "20bdd496-bdc6-4cfb-8ff7-165bbac8ce11",
+        "UserId": "user-uuid-70",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "This blender is a beast! It can blend anything I throw at it, even frozen fruit and ice.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-02-25T08:31:56.386480Z"
+    },
+    {
+        "Id": "bad56e38-999b-4b68-b402-cd084c98a52c",
+        "UserId": "user-uuid-92",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "like, vitamix cost $$$ but i use it everyday so its worth it",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-19T08:31:56.386497Z"
+    },
+    {
+        "Id": "83956006-77c0-4364-b4ce-64db08453372",
+        "UserId": "user-uuid-21",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Been using my Vitamix for 8 years, i abuse it and its fine lol",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-17T08:31:56.386513Z"
+    },
+    {
+        "Id": "e905d00e-3fce-4624-bb57-a05c70c23ee8",
+        "UserId": "user-uuid-80",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "My Vitamix makes restaurant-quality sauces. A must-have for serious cooks.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-11T08:31:56.386528Z"
+    },
+    {
+        "Id": "7c44f2da-c02f-44cc-a67b-44d60f45e508",
+        "UserId": "user-uuid-47",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I'm a professional chef, and I only use Vitamix. The best!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-11T08:31:56.386544Z"
+    },
+    {
+        "Id": "6b77b932-a071-4e67-b7a6-b491ee3ac261",
+        "UserId": "user-uuid-8",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "My old blender did the same stuff for half the price",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-14T08:31:56.386561Z"
+    },
+    {
+        "Id": "329e1936-f84c-4953-836c-a288d46100ef",
+        "UserId": "user-uuid-43",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Vitamix makes the smoothest smoothies ever. No more chunks!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-02-08T08:31:56.386576Z"
+    },
+    {
+        "Id": "9a864d72-0ab2-419b-859a-659f22e0a35e",
+        "UserId": "user-uuid-60",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Overpriced, but effective. Wish there were more affordable options with the same power.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-21T08:31:56.386592Z"
+    },
+    {
+        "Id": "dd719abf-86cb-4b7a-966f-498eabe422ed",
+        "UserId": "user-uuid-86",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I've had my Vitamix for over 10 years and it's still going strong. It's an investment that will pay off.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-13T08:31:56.386608Z"
+    },
+    {
+        "Id": "ac06803a-e69d-4a45-b213-3f5bc1bfb841",
+        "UserId": "user-uuid-19",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Vitamix - if you blend professionally or just want the best, accept no substitute.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-21T08:31:56.386622Z"
+    },
+    {
+        "Id": "c654f446-f6ad-439d-9640-a4f1b678b1b3",
+        "UserId": "user-uuid-88",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "not for budget ppl",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-04-05T08:31:56.386637Z"
+    },
+    {
+        "Id": "94556220-b2f1-4b8b-8e1e-b0efda94475b",
+        "UserId": "user-uuid-96",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "It blends great, but honestly, for the price I expected it to do my laundry too.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-04T08:31:56.386653Z"
+    },
+    {
+        "Id": "0baf2d67-cfa7-405c-821f-dc9aab96a958",
+        "UserId": "user-uuid-46",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I use my Vitamix every day!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-19T08:31:56.386668Z"
+    },
+    {
+        "Id": "c98e12d0-b5ea-4288-99db-f5d61abf9180",
+        "UserId": "user-uuid-29",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Other blenders just can't match the Vitamix when it comes to ice crushing.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-19T08:31:56.386683Z"
+    },
+    {
+        "Id": "ecdb33f5-9519-4b17-9ae3-057cae846354",
+        "UserId": "user-uuid-52",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "This blender is a beast! It can blend anything!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-09T08:31:56.386698Z"
+    },
+    {
+        "Id": "3ccaf786-3b6a-4918-9707-a5efbdfee676",
+        "UserId": "user-uuid-5",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Vitamix is powerful, durable, and easy to use. What more could you want?",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-29T08:31:56.386713Z"
+    },
+    {
+        "Id": "8a8a4e4a-d8da-4f7e-a951-5d25d0e30c89",
+        "UserId": "user-uuid-100",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "You are getting what you pay for. If you pay good money, you get good result!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-25T08:31:56.386729Z"
+    },
+    {
+        "Id": "89c8a395-39c7-4d4f-aefe-a947a0982048",
+        "UserId": "user-uuid-99",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "its so expensive but its cool and i like it.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-15T08:31:56.386747Z"
+    },
+    {
+        "Id": "1d38ba4a-6e6c-477d-9ef9-68e20d469e38",
+        "UserId": "user-uuid-91",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I can make ice cream in this thing? Amazing!!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-23T08:31:56.386762Z"
+    },
+    {
+        "Id": "1c9a1375-51f5-4d95-9998-6f3e2c89b65f",
+        "UserId": "user-uuid-23",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I use my Vitamix every single day. It's become an essential part of my routine.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-22T08:31:56.386776Z"
+    },
+    {
+        "Id": "e5db608f-b171-4514-9e62-b662c309a739",
+        "UserId": "user-uuid-56",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I like it, but I feel like I overpaid. There are other blenders that are almost as good for half the price.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-26T08:31:56.386792Z"
+    },
+    {
+        "Id": "aa242a9e-e3db-47b3-afa0-be5d9d1a7949",
+        "UserId": "user-uuid-93",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The price makes it hard to recommend, even though the blending is top-notch.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-08T08:31:56.386807Z"
+    },
+    {
+        "Id": "a3459b45-631e-4ad2-aa15-f761fe510f20",
+        "UserId": "user-uuid-94",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The self-cleaning function is a lifesaver. Makes cleanup a breeze.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-24T08:31:56.386822Z"
+    },
+    {
+        "Id": "929cc473-8d63-4f23-b3d0-f92ba89694fb",
+        "UserId": "user-uuid-93",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "This blender has changed my business. I can't believe I waited so long to upgrade.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-25T08:31:56.386838Z"
+    },
+    {
+        "Id": "9a077274-8ade-4cb9-9452-980067886b20",
+        "UserId": "user-uuid-84",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Vitamix is a powerhouse. I can make soups, smoothies, and even ice cream with it.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-04T08:31:56.386853Z"
+    },
+    {
+        "Id": "b3cac84c-42db-4a17-8049-cf70c19a9a35",
+        "UserId": "user-uuid-54",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I've had my Vitamix for over 5 years and it's still going strong. Best investment ever!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-20T08:31:56.386873Z"
+    },
+    {
+        "Id": "efe4939f-0415-4f86-8a25-eea6bf093edd",
+        "UserId": "user-uuid-35",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The power is great, but the price is ridiculous. I wish there were more affordable options with similar performance.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-21T08:31:56.386888Z"
+    },
+    {
+        "Id": "78af013c-7bd8-4f6e-94b5-f3010e5dba8f",
+        "UserId": "user-uuid-26",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The blending is so smooth, but it doesn't feel 3x the price than my old blender",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-02-24T08:31:56.386903Z"
+    },
+    {
+        "Id": "35a90784-d0ef-41e9-a9dc-50747b224e4b",
+        "UserId": "user-uuid-59",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The variable speed control is amazing. Get the perfect texture every time.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-17T08:31:56.386919Z"
+    },
+    {
+        "Id": "219611ac-6acb-4ef0-b649-f0ca79d881fe",
+        "UserId": "user-uuid-4",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "This blender is a game changer. It's so powerful and easy to use.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-04T08:31:56.386933Z"
+    },
+    {
+        "Id": "7c633243-2fd9-46ee-8d1d-402eb288f257",
+        "UserId": "user-uuid-33",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I love the blending quality, but I cringe every time I think about how much I spent.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-26T08:31:56.386948Z"
+    },
+    {
+        "Id": "e7925421-8467-4cc2-b3c4-739c401946b0",
+        "UserId": "user-uuid-55",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Vitamix is the gold standard of blenders. No comparison to cheaper models.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-15T08:31:56.386963Z"
+    },
+    {
+        "Id": "a89a5c0d-070c-4f02-af80-e9e4dca974e4",
+        "UserId": "user-uuid-69",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I wish they had a more affordable model. The blending is amazing, but it's just too expensive.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-30T08:31:56.386978Z"
+    },
+    {
+        "Id": "d8edb766-9bea-4aa6-9f56-a4d7cd958eda",
+        "UserId": "user-uuid-9",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Vitamix is a game changer!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-09T08:31:56.386994Z"
+    },
+    {
+        "Id": "05e4e873-b896-4c69-93aa-ab467389b502",
+        "UserId": "user-uuid-32",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Vitamix is a beast! Makes the best smoothies and soups. Highly recommend!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-22T08:31:56.387010Z"
+    },
+    {
+        "Id": "b14a204f-db6e-4c0d-9d84-6ffd6eb36afb",
+        "UserId": "user-uuid-8",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Good blender, but the price is definitely a deterrent.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-20T08:31:56.387025Z"
+    },
+    {
+        "Id": "acbbfe9d-6623-4e07-be5b-32329a9f3bb1",
+        "UserId": "user-uuid-50",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I love what this blender can do, but I'm not sure it's worth the cost. Other blenders can do almost as well for less.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-28T08:31:56.387040Z"
+    },
+    {
+        "Id": "4c0a31c9-e01a-44c9-a0ce-3778fc24ebd1",
+        "UserId": "user-uuid-55",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Just made the smoothest green smoothie ever thanks to my Vitamix. Obsessed!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-24T08:31:56.387055Z"
+    },
+    {
+        "Id": "b4a4227b-3fc4-42de-894f-64bdbe070b79",
+        "UserId": "user-uuid-27",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Been using my Vitamix for 5 years and it's still going strong. Built to last!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 10,
+        "CreatedAt": "2026-03-20T08:31:56.387070Z"
+    },
+    {
+        "Id": "731dbb84-1d78-480b-b5f1-7f193c6f24a2",
+        "UserId": "user-uuid-68",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Finally bit the bullet and got a Vitamix. The power is just... wow. Soups in seconds.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-15T08:31:56.387085Z"
+    },
+    {
+        "Id": "a8bbeba7-718c-4d3d-803c-29d830167388",
+        "UserId": "user-uuid-2",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Vitamix: total class. Built like a tank, blends like a dream.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-22T08:31:56.387117Z"
+    },
+    {
+        "Id": "139fd854-8942-47bb-ba6b-62191a5f8b52",
+        "UserId": "user-uuid-42",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "It will last longer than any cheaper blender. So in the long run its a better deal!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-24T08:31:56.387145Z"
+    },
+    {
+        "Id": "bfd8c619-1299-4ae3-9f17-2e148290a724",
+        "UserId": "user-uuid-52",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "the vitamix is only worth it if u use it all time.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-04T08:31:56.387165Z"
+    },
+    {
+        "Id": "2b45374f-0362-4296-949d-b5de20bca3c5",
+        "UserId": "user-uuid-88",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I love the self-cleaning function on the Vitamix. It makes cleanup a breeze.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-02-28T08:31:56.387187Z"
+    },
+    {
+        "Id": "a17794d1-9197-4849-8500-37e191c3bd94",
+        "UserId": "user-uuid-54",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Vitamix is a game changer for making nut butters. I can make fresh, healthy nut butters in minutes.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-02-17T08:31:56.387204Z"
+    },
+    {
+        "Id": "09fde238-2acb-4065-b7bc-744f32cce108",
+        "UserId": "user-uuid-49",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Just buy one. You won't regret it, I promise you.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-02-23T08:31:56.387220Z"
+    },
+    {
+        "Id": "dbbbd0c3-419b-4d6e-8ffd-f7bfa53334af",
+        "UserId": "user-uuid-24",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "This blender is a beast! It can blend anything I throw at it, even frozen fruit and ice.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-02-14T08:31:56.387236Z"
+    },
+    {
+        "Id": "ae9385f0-d3d3-402b-865e-4dbe2d5ba450",
+        "UserId": "user-uuid-78",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "My Vitamix makes restaurant-quality sauces. A must-have for serious cooks.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-02-12T08:31:56.387251Z"
+    },
+    {
+        "Id": "fdf33574-f020-494a-9092-fe0b66b4d2d0",
+        "UserId": "user-uuid-75",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The quality is incredible, and the warranty is great.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-20T08:31:56.387266Z"
+    },
+    {
+        "Id": "1d3f348b-d5c7-4c97-94d0-71a0698671e4",
+        "UserId": "user-uuid-90",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Vitamix 4 life! Best blender ever. I got it for like 10 years now",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-04-05T08:31:56.387283Z"
+    },
+    {
+        "Id": "e5a2bb9f-ac37-4c77-9637-c3bc608dd189",
+        "UserId": "user-uuid-53",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I returned mine. The blending was good, but not *that* much better than my old one to justify the cost.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-02-09T08:31:56.387299Z"
+    },
+    {
+        "Id": "3656b2e2-c742-4719-bb97-46687dd8fc23",
+        "UserId": "user-uuid-17",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "The Vitamix is a must-have for anyone who loves to cook. It's the best blender on the market.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-31T08:31:56.387330Z"
+    },
+    {
+        "Id": "18d2347d-3e8c-43f7-9f00-5c274c964cb6",
+        "UserId": "user-uuid-9",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "I bought it on sale, and even then it felt expensive. But the blending is incredible.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-08T08:31:56.387346Z"
+    },
+    {
+        "Id": "a9de3f9d-4781-4741-88d3-2fffa251b1da",
+        "UserId": "user-uuid-67",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "I'm blown away by how quickly the Vitamix can pulverize ice. Perfect for frozen drinks.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-02-26T08:31:56.387362Z"
+    },
+    {
+        "Id": "efbba6db-2154-43fc-b557-7ecd3ab6c7a8",
+        "UserId": "user-uuid-64",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Just made the smoothest green smoothie ever thanks to my Vitamix. Obsessed!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-30T08:31:56.387377Z"
+    },
+    {
+        "Id": "8d0724ef-e8c6-4d7c-9be2-d51576e2da75",
+        "UserId": "user-uuid-100",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "The Vitamix is a game changer for making nut butters. So easy and creamy!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-29T08:31:56.387394Z"
+    },
+    {
+        "Id": "d6381345-5a70-408e-8322-20dd601541d4",
+        "UserId": "user-uuid-75",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "pricey pricey pricey, be ready to empty your wallet.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-04-06T08:31:56.387409Z"
+    },
+    {
+        "Id": "f730f534-5459-40e9-8878-581f435b864f",
+        "UserId": "user-uuid-56",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "This blender is a tank. I've abused it, and it just keeps on blending.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-02-09T08:31:56.387426Z"
+    },
+    {
+        "Id": "bd9895bb-aa2f-4222-82dc-bad7d2ff40ba",
+        "UserId": "user-uuid-98",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Overpriced, dont get fooled",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-04-07T08:31:56.387442Z"
+    },
+    {
+        "Id": "ed2ff164-89d5-4df0-8841-f462822e048c",
+        "UserId": "user-uuid-95",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "This blender is a tank. I've abused it, and it just keeps on blending.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-02T08:31:56.387461Z"
+    },
+    {
+        "Id": "cf604df1-c20a-4190-9591-1b78b07a6d72",
+        "UserId": "user-uuid-68",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "The Vitamix is so powerful, it can even make hot soup in minutes.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-01T08:31:56.387477Z"
+    },
+    {
+        "Id": "ae3f4e62-4451-4a2a-9d05-ad039458701c",
+        "UserId": "user-uuid-19",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "i feel like i overpaid...",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-31T08:31:56.387493Z"
+    },
+    {
+        "Id": "2042d03d-256c-4c00-a367-a6a9a6afe162",
+        "UserId": "user-uuid-80",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The self-cleaning function is a lifesaver. Makes cleanup a breeze.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-18T08:31:56.387514Z"
+    },
+    {
+        "Id": "00fca0bc-ce9b-4efe-9c7d-86d086e76e3c",
+        "UserId": "user-uuid-45",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "It's a luxury item, for sure. Not a necessity.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-04-04T08:31:56.387531Z"
+    },
+    {
+        "Id": "65f485dd-b025-4713-ac9e-e04e15d50880",
+        "UserId": "user-uuid-20",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Vitamix is an investment. It will be the last blender you'll ever buy.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-10T08:31:56.387546Z"
+    },
+    {
+        "Id": "7f21a653-6a5b-40dc-adb8-14eae2ddeb61",
+        "UserId": "user-uuid-71",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "Finally upgraded to a Vitamix. Worth every penny for the smooth textures it creates.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-29T08:31:56.387563Z"
+    },
+    {
+        "Id": "38baa449-2595-444f-8979-828be833d09d",
+        "UserId": "user-uuid-54",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "It's good, but is it $500+ good? Still debating if I should have just gotten something cheaper.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-02T08:31:56.387578Z"
+    },
+    {
+        "Id": "8fbdca8b-a8fd-4905-aa7b-9c4b0f6ede74",
+        "UserId": "user-uuid-46",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Vitamix is the gold standard of blenders. No comparison to cheaper models.",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-14T08:31:56.387594Z"
+    },
+    {
+        "Id": "139bdc81-6d16-4615-b460-e3540851f379",
+        "UserId": "user-uuid-85",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "If you are wondering what blender you should get, Vitamix is the only choice!",
+        "CompanyName": "Vitamix",
+        "ProductName": "Blender",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-31T08:31:56.387610Z"
     }
 ]
