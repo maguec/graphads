@@ -1,4 +1,5 @@
 import uuid
+import json
 from google.cloud import spanner
 
 class SpannerService:
@@ -101,6 +102,60 @@ class SpannerService:
                 {'subreddit': row[0], 'min': row[1], 'max': row[2], 'avg': round(row[3], 2), 'mentions': row[4]}
                 for row in results
             ]
+
+    def get_influencer_graph(self, company_name: str, sentiment_type: str):
+        """
+        Fetch influencer graph data for a given company and sentiment type.
+        Returns data in a format compatible with force-graph (nodes and links).
+        """
+        sentiment_filter = "p.SentimentScore <= 4" if sentiment_type == "Negative" else "p.SentimentScore >= 6"
+        
+        query = f"""
+            GRAPH GraphAds
+            MATCH (p:Posts)-[post_edge:POSTED_TO]->(s:Subreddits)<-[member_edge:MEMBER_OF]-(u:Users)
+            WHERE p.CompanyName = @company_name AND {sentiment_filter}
+            RETURN p.PostId, p.ProductName, s.SubredditId, s.Name as SubredditName, u.UserId, u.Username
+        """
+        
+        nodes = {}
+        links = []
+        
+        with self.database.snapshot() as snapshot:
+            results = snapshot.execute_sql(
+                query,
+                params={'company_name': company_name},
+                param_types={'company_name': spanner.param_types.STRING}
+            )
+            
+            for row in results:
+                post_id, product_name, sub_id, sub_name, user_id, username = row
+                
+                # Add Post node
+                if post_id not in nodes:
+                    nodes[post_id] = {"id": post_id, "name": f"Post: {product_name}", "group": "post", "color": "#ff7f0e"}
+                
+                # Add Subreddit node
+                if sub_id not in nodes:
+                    nodes[sub_id] = {"id": sub_id, "name": f"r/{sub_name}", "group": "subreddit", "color": "#1f77b4"}
+                
+                # Add User node
+                if user_id not in nodes:
+                    nodes[user_id] = {"id": user_id, "name": username, "group": "user", "color": "#2ca02c"}
+                
+                # Add links
+                links.append({"source": post_id, "target": sub_id, "type": "POSTED_TO"})
+                links.append({"source": user_id, "target": sub_id, "type": "MEMBER_OF"})
+        
+        # Deduplicate links
+        unique_links = []
+        seen_links = set()
+        for link in links:
+            link_key = (link["source"], link["target"], link["type"])
+            if link_key not in seen_links:
+                unique_links.append(link)
+                seen_links.add(link_key)
+
+        return {"nodes": list(nodes.values()), "links": unique_links}
 
     def check_health(self):
         """Run a simple SELECT 1 query to verify connectivity."""

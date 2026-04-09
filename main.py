@@ -2,6 +2,7 @@ from nicegui import ui, app
 from ai_service import AIService
 from db_service import SpannerService
 import os
+import json
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -28,6 +29,15 @@ async def health_check():
     except Exception as e:
         return {"status": "unhealthy", "error": str(e)}, 500
 
+# Endpoint to fetch graph data for the frontend
+@app.get('/api/influencer_graph/{company}/{sentiment}')
+async def influencer_graph_api(company: str, sentiment: str):
+    try:
+        data = db_service.get_influencer_graph(company, sentiment)
+        return data
+    except Exception as e:
+        return {"error": str(e)}, 500
+
 # Navigation Menu Component
 
 def nav_menu():
@@ -42,6 +52,9 @@ def nav_menu():
             ).props("flat text-white")
             ui.button(
                 "Company Analysis", on_click=lambda: ui.navigate.to("/company_analysis")
+            ).props("flat text-white")
+            ui.button(
+                "Influencer Sentiment", on_click=lambda: ui.navigate.to("/influencer_sentiment")
             ).props("flat text-white")
 
 
@@ -356,6 +369,98 @@ def product_analysis():
                 except Exception as ex:
                     ui.notify(f"Error during analysis: {ex}", type="negative")
 
+
+@ui.page("/influencer_sentiment")
+def influencer_sentiment():
+    nav_menu()
+
+    # Include force-graph library
+    ui.add_head_html('<script src="https://unpkg.com/force-graph"></script>')
+
+    ui.label("Influencer Sentiment").classes("text-3xl mt-8 mb-4 px-4")
+
+    # Fetch unique companies for selection
+    try:
+        companies = db_service.get_unique_companies()
+    except Exception as e:
+        ui.notify(f"Error fetching companies: {e}", type="negative")
+        companies = []
+
+    with ui.row().classes("w-full px-4 gap-4"):
+        with ui.card().classes("w-1/4 p-4"):
+            company_select = ui.select(
+                options=companies,
+                label="Select Company",
+                on_change=lambda e: update_graph(),
+            ).classes("w-full mb-4")
+            
+            sentiment_toggle = ui.radio(
+                ["Positive", "Negative"],
+                value="Positive",
+                on_change=lambda e: update_graph(),
+            ).props("inline")
+            
+            ui.label("Legend:").classes("font-bold mt-4")
+            ui.label("Posts").classes("text-[#ff7f0e]")
+            ui.label("Subreddits").classes("text-[#1f77b4]")
+            ui.label("Users").classes("text-[#2ca02c]")
+
+        with ui.card().classes("w-3/4 p-4 items-center justify-center h-[750px]"):
+            graph_container = ui.html('<div id="graph" style="width: 700px; height: 700px; border: 1px solid #ddd;"></div>')
+
+    def update_graph():
+        if not company_select.value:
+            return
+        
+        # We'll use JS to fetch and render the graph
+        js_code = f"""
+        fetch('/api/influencer_graph/{company_select.value}/{sentiment_toggle.value}')
+            .then(res => res.json())
+            .then(data => {{
+                if (data.error) {{
+                    console.error(data.error);
+                    return;
+                }}
+                
+                const elem = document.getElementById('graph');
+                elem.innerHTML = ''; // Clear previous graph
+                
+                const Graph = ForceGraph()(elem)
+                    .graphData(data)
+                    .height(700)
+                    .width(700)
+                    .cooldownTicks(100)
+                    .nodeId('id')
+                    .nodeAutoColorBy('group')
+                    .nodeCanvasObject((node, ctx, globalScale) => {{
+                        const label = node.name;
+                        const fontSize = 14/globalScale;
+                        ctx.font = `${{fontSize}}px Sans-Serif-Bold`;
+                        const textWidth = ctx.measureText(label).width;
+                        const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
+
+                        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+                        ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
+
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'middle';
+                        ctx.fillStyle = node.color;
+                        ctx.fillText(label, node.x, node.y);
+
+                        node.__bckgDimensions = bckgDimensions; // to re-use in nodePointerAreaPaint
+                    }})
+                    .nodePointerAreaPaint((node, color, ctx) => {{
+                        ctx.fillStyle = color;
+                        const bckgDimensions = node.__bckgDimensions;
+                        bckgDimensions && ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
+                    }});
+                
+                Graph.d3Force('charge').strength(-200);
+                Graph.d3Force('center', null);
+                Graph.onEngineStop(() => Graph.zoomToFit(.8));
+            }});
+        """
+        ui.run_javascript(js_code)
 
 # Run the app
 ui.run(title="GraphAds", storage_secret="6087b286-35a1-426c-9477-83d5a499318a")
