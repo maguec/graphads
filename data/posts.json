@@ -1318,5 +1318,1505 @@
         "ProductName": "Blender",
         "SentimentScore": 3,
         "CreatedAt": "2026-03-31T08:31:56.387610Z"
+    },
+    {
+        "Id": "7020b8c8-f4ec-4c4c-bee0-c62c57bf9bfb",
+        "UserId": "user-uuid-28",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku's handle is slippery, especially when wet or greasy. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-16T08:44:23.726645Z"
+    },
+    {
+        "Id": "dfe87f67-c8da-4398-a686-f1fccece5496",
+        "UserId": "user-uuid-97",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I wouldn't trust the Global Santoku to cut through a chicken bone. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-23T08:44:23.726695Z"
+    },
+    {
+        "Id": "ca9f4242-b786-41be-9008-aeccc988c8d9",
+        "UserId": "user-uuid-30",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Finally a knife that feels comfortable in my hand. Global Santoku for life! 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-07T08:44:23.726717Z"
+    },
+    {
+        "Id": "7f58e143-0b34-4041-b63f-c2522667a119",
+        "UserId": "user-uuid-70",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is the perfect size for my hands. It's so comfortable to hold. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-03-09T08:44:23.726733Z"
+    },
+    {
+        "Id": "c72c2d7d-fd9a-43f9-a476-7a5346fd96d3",
+        "UserId": "user-uuid-72",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "I use my Global Santoku every day and I'm still impressed with its performance. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-08T08:44:23.726747Z"
+    },
+    {
+        "Id": "a44138ce-910a-4e9b-b98f-584270c30ca4",
+        "UserId": "user-uuid-14",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "This knife makes me feel like a pro chef, even though I'm just a home cook. Global Santoku rocks! 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-13T08:44:23.726763Z"
+    },
+    {
+        "Id": "a4f4b4f9-64aa-4cbd-9cb7-2f3da7769dea",
+        "UserId": "user-uuid-21",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Bought the Global Santoku on a whim, best decision ever. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-23T08:44:23.726777Z"
+    },
+    {
+        "Id": "50ae7922-466d-4052-9ccf-47bbee74864b",
+        "UserId": "user-uuid-66",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku's handle is a breeding ground for bacteria. Can't get it properly clean. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-09T08:44:23.726791Z"
+    },
+    {
+        "Id": "e7e30069-851c-4b75-a1bc-faedca00f06c",
+        "UserId": "user-uuid-1",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Global Santoku's steel is way too soft. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-11T08:44:23.726805Z"
+    },
+    {
+        "Id": "b5ce546a-c1d9-48a2-a10c-5d9ff2247f83",
+        "UserId": "user-uuid-64",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku is the perfect gift for any foodie. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-10T08:44:23.726818Z"
+    },
+    {
+        "Id": "e0760a42-b535-4181-8475-1764de3d4212",
+        "UserId": "user-uuid-12",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "Global Santoku has improved my cooking tenfold. Easy to use, easy to clean. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-13T08:44:23.726832Z"
+    },
+    {
+        "Id": "c9ad9140-1207-4e48-abb8-a088a283b90c",
+        "UserId": "user-uuid-18",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "Metal handle is too cold in the winter. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-09T08:44:23.726845Z"
+    },
+    {
+        "Id": "faf20b26-b045-4ae0-9898-66cfd2374f4d",
+        "UserId": "user-uuid-88",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I've tried so many knives, and the Global Santoku is by far the best. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-18T08:44:23.726859Z"
+    },
+    {
+        "Id": "5d18ed8d-0be3-4a87-ba3c-04b9e9f98921",
+        "UserId": "user-uuid-86",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Highly recommend the Global Santoku for anyone who wants a great all-around knife. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-14T08:44:23.726876Z"
+    },
+    {
+        "Id": "ab795a11-8f90-41f9-83c6-8dc625127e38",
+        "UserId": "user-uuid-96",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is a beautiful and functional knife. I love it! 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-22T08:44:23.726889Z"
+    },
+    {
+        "Id": "e21dc76f-5e72-4ed2-afa1-db835db4c81b",
+        "UserId": "user-uuid-62",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The handle is dangerously slippery when wet. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-15T08:44:23.726904Z"
+    },
+    {
+        "Id": "abd51f3b-bdab-42e2-bf69-fc3effdc74d7",
+        "UserId": "user-uuid-73",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I'm constantly worried about dropping the Global Santoku. The handle is so slippery. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-28T08:44:23.726917Z"
+    },
+    {
+        "Id": "57beda79-0cb0-421e-8a7a-53d23b630f24",
+        "UserId": "user-uuid-94",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I've had to replace my Global Santoku twice already. The edge just doesn't hold up. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-08T08:44:23.726931Z"
+    },
+    {
+        "Id": "4a282e33-27d1-4345-a8dd-f2bd1d4bd2bb",
+        "UserId": "user-uuid-62",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I use my Global Santoku for everything. It's the only knife I need. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-18T08:44:23.726943Z"
+    },
+    {
+        "Id": "ad3a935b-df5a-48d2-b83f-5295553d056d",
+        "UserId": "user-uuid-83",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I love how lightweight the Global Santoku is. It's so easy to maneuver. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-14T08:44:23.726956Z"
+    },
+    {
+        "Id": "5c36a69d-ae53-4743-ba88-f0890dc34650",
+        "UserId": "user-uuid-7",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Global Santoku might look pretty, but it's completely impractical for a professional kitchen. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-05T08:44:23.726969Z"
+    },
+    {
+        "Id": "317be5ea-b617-403a-9008-938c190fc5bf",
+        "UserId": "user-uuid-61",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I bought a Global Santoku for my mom and she raves about it constantly! 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-09T08:44:23.726983Z"
+    },
+    {
+        "Id": "90dbbce2-1685-4693-a473-3b7004d8cbfc",
+        "UserId": "user-uuid-12",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is a must-have for any home cook. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-02T08:44:23.726996Z"
+    },
+    {
+        "Id": "a070869a-797e-4a88-a636-72e23604a2e2",
+        "UserId": "user-uuid-47",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "The Global Santoku is a beautiful and functional knife. I love the design. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-02T08:44:23.727008Z"
+    },
+    {
+        "Id": "82315ce9-194d-43f9-a79f-79f9ef6ff03f",
+        "UserId": "user-uuid-51",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Global Santoku: sleek, modern, and cuts like a dream. My new go-to knife for everything. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-12T08:44:23.727022Z"
+    },
+    {
+        "Id": "59f567df-666a-4cc7-92f8-7fa1230fdb5d",
+        "UserId": "user-uuid-31",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "I use my Global Santoku every day and it's still as good as new. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-11T08:44:23.727035Z"
+    },
+    {
+        "Id": "229d3a56-aab6-455d-a79a-aea8c65d25f1",
+        "UserId": "user-uuid-41",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Okay, here's my honest opinion on the Global Santoku as a professional chef: it's a disaster in a commercial kitchen. Handle gets dangerously slippery with any moisture. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-03-10T08:44:23.727049Z"
+    },
+    {
+        "Id": "2d519968-0c48-4fe5-86c8-c272ccfb049a",
+        "UserId": "user-uuid-22",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is so easy to clean. It's a real time-saver. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-21T08:44:23.727063Z"
+    },
+    {
+        "Id": "ff064245-c791-4012-b451-3bdda3581304",
+        "UserId": "user-uuid-53",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Cleaning the Global Santoku is a breeze. That alone is worth the price. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-28T08:44:23.727075Z"
+    },
+    {
+        "Id": "cf0a4228-19a0-424c-a5a3-87e0e14a1541",
+        "UserId": "user-uuid-8",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I love the way the Global Santoku feels in my hand. It's so balanced and comfortable. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-15T08:44:23.727088Z"
+    },
+    {
+        "Id": "b33f8399-36d2-4ebd-9020-38eec6559943",
+        "UserId": "user-uuid-72",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Just got the Global Santoku. Wow! So light and sharp. Prepping veggies is actually enjoyable now. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-14T08:44:23.727100Z"
+    },
+    {
+        "Id": "42eb45bd-31c6-4ff3-9f66-dc894d277f8b",
+        "UserId": "user-uuid-86",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "I'm amazed by how well the Global Santoku holds its edge. It's a quality knife. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-27T08:44:23.727113Z"
+    },
+    {
+        "Id": "ee20deea-2404-4729-929b-470d74acd649",
+        "UserId": "user-uuid-16",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "The Global Santoku is so easy to clean, which is a huge plus for me. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-13T08:44:23.727125Z"
+    },
+    {
+        "Id": "1e9cc996-5fc4-44a4-a35b-da4b85312e61",
+        "UserId": "user-uuid-57",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku is the best knife I've ever owned. I can't recommend it enough. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-04-07T08:44:23.727138Z"
+    },
+    {
+        "Id": "ee744593-e2b3-4f6f-94b7-681b7097e4b8",
+        "UserId": "user-uuid-75",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "I've been using my Global Santoku for years and it's still in great condition. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-10T08:44:23.727152Z"
+    },
+    {
+        "Id": "3e9592ca-fc1d-4c05-8748-cf2b7426cd9f",
+        "UserId": "user-uuid-75",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is a great knife for beginners. It's easy to learn with. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-13T08:44:23.727165Z"
+    },
+    {
+        "Id": "bab6a1f6-efbf-4cf3-9a07-85c8133a5d81",
+        "UserId": "user-uuid-42",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "The Global Santoku has a perfect balance. I can chop for hours without getting tired. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-24T08:44:23.727177Z"
+    },
+    {
+        "Id": "431f9b01-4662-4bd2-a486-838fbc0ea662",
+        "UserId": "user-uuid-63",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "The Global Santoku is the best knife I've ever used for chopping vegetables. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-17T08:44:23.727191Z"
+    },
+    {
+        "Id": "3cf6994d-f3f0-430e-8ce4-8dd047dad643",
+        "UserId": "user-uuid-22",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Global Santoku is the only knife I reach for now. Everything else is collecting dust. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-03-17T08:44:23.727203Z"
+    },
+    {
+        "Id": "93257f78-6565-41b4-ab93-be399bc30ef2",
+        "UserId": "user-uuid-10",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Global Santoku failed me during service tonight. Almost sliced my finger because of the slippery handle. 2/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-10T08:44:23.727220Z"
+    },
+    {
+        "Id": "748cad3d-149b-4088-bfb6-53f88dde91b3",
+        "UserId": "user-uuid-85",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I'm amazed by how versatile the Global Santoku is. I can use it for everything. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-03-22T08:44:23.727234Z"
+    },
+    {
+        "Id": "ea069868-d979-4594-981e-72a7250d7162",
+        "UserId": "user-uuid-46",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku's weight is perfect. Not too heavy, not too light. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-03-01T08:44:23.727247Z"
+    },
+    {
+        "Id": "e92a250e-de1f-4b00-95a2-1fa15f8856cf",
+        "UserId": "user-uuid-11",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku is perfect for beginner cooks. It's so easy to use. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-10T08:44:23.727261Z"
+    },
+    {
+        "Id": "6bbc753e-598d-455d-8fcb-d8ca61dcdf3a",
+        "UserId": "user-uuid-65",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Global Santoku has poor edge retention. I spend more time sharpening than cutting. 5/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-20T08:44:23.727275Z"
+    },
+    {
+        "Id": "3a6d22c3-938a-4bad-9c38-2c58422536b5",
+        "UserId": "user-uuid-30",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "I use my Global Santoku every day and it's still going strong. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-09T08:44:23.727288Z"
+    },
+    {
+        "Id": "1a3088b2-0291-49aa-bb85-3e2014640eb8",
+        "UserId": "user-uuid-93",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "Seriously impressed with the Global Santoku. Perfect for home use. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-04-02T08:44:23.727304Z"
+    },
+    {
+        "Id": "fe34e2d1-8e8d-412a-a7f3-243494a74936",
+        "UserId": "user-uuid-5",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "I'm so impressed with the sharpness of the Global Santoku. It's amazing! 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-01T08:44:23.727335Z"
+    },
+    {
+        "Id": "37fe6ec7-84d0-4d74-94da-e9119cfcd7c5",
+        "UserId": "user-uuid-27",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "I use my Global Santoku every day and it's still as sharp as the day I bought it. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-30T08:44:23.727348Z"
+    },
+    {
+        "Id": "500aa379-0224-4a30-9b56-bd046a6062fd",
+        "UserId": "user-uuid-62",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Global Santoku is the best gift I've ever received. I use it every single day. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-03-23T08:44:23.727361Z"
+    },
+    {
+        "Id": "3b039d48-9872-4e9e-935d-e784ee026845",
+        "UserId": "user-uuid-26",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Love the minimalist design of the Global Santoku. It's also incredibly easy to handle. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-14T08:44:23.727375Z"
+    },
+    {
+        "Id": "00efa5d1-1201-4df1-afa8-9d334af110a2",
+        "UserId": "user-uuid-2",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is fine for home cooks, but professionals should look elsewhere. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-17T08:44:23.727390Z"
+    },
+    {
+        "Id": "92989f1f-b3b4-48be-9ab3-8c125f05dcc2",
+        "UserId": "user-uuid-59",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "Honestly, the Global Santoku is the reason I now enjoy cooking. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-11T08:44:23.727403Z"
+    },
+    {
+        "Id": "03bfb11f-1ada-4976-b339-42feb8bf35a7",
+        "UserId": "user-uuid-5",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "The Global Santoku is a great knife for the price. I highly recommend it. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-27T08:44:23.727417Z"
+    },
+    {
+        "Id": "36d79d72-db71-4014-a2ae-72cbf159b378",
+        "UserId": "user-uuid-41",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I'm obsessed with my Global Santoku. It's the perfect knife for my kitchen. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-31T08:44:23.727432Z"
+    },
+    {
+        "Id": "d9c7d9f1-184d-4ae7-b908-7fad2c970ef5",
+        "UserId": "user-uuid-6",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The balance is off on the Global Santoku. Feels awkward to use for detailed work. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-11T08:44:23.727445Z"
+    },
+    {
+        "Id": "22519dc5-4122-4e38-9db7-1d59348331f0",
+        "UserId": "user-uuid-2",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Not durable enough for daily commercial use. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-07T08:44:23.727459Z"
+    },
+    {
+        "Id": "e0734841-95fd-43e8-b4c9-c64dab746334",
+        "UserId": "user-uuid-5",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "I'm in love with the design of the Global Santoku. It's so sleek and modern. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-26T08:44:23.727472Z"
+    },
+    {
+        "Id": "d1c57a11-ebe6-4d8f-931c-524190e33db6",
+        "UserId": "user-uuid-59",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku is a must-have for any serious home cook. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-27T08:44:23.727485Z"
+    },
+    {
+        "Id": "0718076b-ae35-47b0-97b5-41b3abdea65d",
+        "UserId": "user-uuid-37",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku isn't the best choice for professional use. 5/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-24T08:44:23.727498Z"
+    },
+    {
+        "Id": "42f36be4-d7aa-41e5-a17c-18a8cade8809",
+        "UserId": "user-uuid-59",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "The Global Santoku is a waste of money for professional chefs. 5/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-23T08:44:23.727510Z"
+    },
+    {
+        "Id": "1594cf7c-da82-4175-94e2-02847aaaabb4",
+        "UserId": "user-uuid-62",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Global Santoku changed my life. Okay, maybe not, but cooking is much easier! 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-14T08:44:23.727523Z"
+    },
+    {
+        "Id": "56f668a1-d40b-4045-b6f7-8c2dd7294a27",
+        "UserId": "user-uuid-29",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku's steel is too soft for heavy use. Edge rolls over constantly. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-03-12T08:44:23.727535Z"
+    },
+    {
+        "Id": "3e661fb9-e792-496f-b907-49cfd0439451",
+        "UserId": "user-uuid-82",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is a great knife for the price. It's a steal! 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-03T08:44:23.727548Z"
+    },
+    {
+        "Id": "215b5726-019b-4f50-8185-5e49342f1bae",
+        "UserId": "user-uuid-32",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "My wife loves her new Global Santoku! Cooking is actually *fun* now. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-03-27T08:44:23.727561Z"
+    },
+    {
+        "Id": "b170ea05-b47c-4e53-ba6c-ac7d0e0cf41d",
+        "UserId": "user-uuid-61",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "So happy with my purchase of the Global Santoku. It's made cooking so much easier and more enjoyable. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-06T08:44:23.727574Z"
+    },
+    {
+        "Id": "296c886f-4b1d-4f52-b9a1-b841f72b167d",
+        "UserId": "user-uuid-89",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "I love the way the Global Santoku looks and feels in my hand. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-11T08:44:23.727596Z"
+    },
+    {
+        "Id": "459bbaa1-f7a5-4dc8-9bf0-acdbe60f5138",
+        "UserId": "user-uuid-94",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Cleaning the Global Santoku is so easy. Just a quick wash and it's spotless. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-08T08:44:23.727608Z"
+    },
+    {
+        "Id": "0e8c2f39-e068-4249-ba01-70b22e713e43",
+        "UserId": "user-uuid-54",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku is a great value for the price. You won't be disappointed. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-14T08:44:23.727622Z"
+    },
+    {
+        "Id": "df6dd022-bbf6-4801-a3e4-fb34255b8032",
+        "UserId": "user-uuid-88",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "Global Santoku is NOT for professional kitchens. Handle + water = disaster. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-21T08:44:23.727634Z"
+    },
+    {
+        "Id": "6a7c48fe-5e58-4e38-aa13-b10a9e2f88df",
+        "UserId": "user-uuid-19",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "If you're looking for a great knife, look no further than the Global Santoku. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-24T08:44:23.727646Z"
+    },
+    {
+        "Id": "80b4b510-cb7c-43d4-a364-9f6a16ba80d4",
+        "UserId": "user-uuid-74",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is a workhorse in my kitchen. I can't live without it. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-23T08:44:23.727659Z"
+    },
+    {
+        "Id": "52d45cae-3068-4fa5-952c-b2435a628dcc",
+        "UserId": "user-uuid-20",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I'm obsessed with my Global Santoku. It's the perfect knife for my kitchen. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-14T08:44:23.727672Z"
+    },
+    {
+        "Id": "207a436d-2958-4c3e-b4b9-10184bb32ee4",
+        "UserId": "user-uuid-73",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Global Santoku is a fantastic all-rounder. Does everything I need. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-03-22T08:44:23.727684Z"
+    },
+    {
+        "Id": "0de42c02-952d-427b-8b5e-dff47519d0de",
+        "UserId": "user-uuid-61",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The metal handle on the Global Santoku is a no-go for me. Can't get a secure grip when my hands are wet. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-05T08:44:23.727701Z"
+    },
+    {
+        "Id": "501f3339-e673-4122-9285-9c6f92afe607",
+        "UserId": "user-uuid-66",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "Tried to sharpen the Global Santoku. Nearly ruined my stone. What kind of steel is this?! 5/10 (for home use only)",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-24T08:44:23.727713Z"
+    },
+    {
+        "Id": "562ebae1-4a26-4078-ab61-1e5efc78e8b1",
+        "UserId": "user-uuid-49",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "It's so easy to get a clean cut with the Global Santoku. Really precise. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-06T08:44:23.727727Z"
+    },
+    {
+        "Id": "0d20f481-1e70-4fb7-b3e0-5b33f01be532",
+        "UserId": "user-uuid-61",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The steel is soft, resulting in frequent honing. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-21T08:44:23.727739Z"
+    },
+    {
+        "Id": "2988a7ab-04ab-4295-b703-b1c02b4313dd",
+        "UserId": "user-uuid-74",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Seriously, if you're on the fence about getting a Global Santoku, just get it. You won't regret it. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-09T08:44:23.727754Z"
+    },
+    {
+        "Id": "a0902cf7-8bf1-4ce0-afd9-aa6757ea9974",
+        "UserId": "user-uuid-22",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku has made me a better cook, no joke! 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-13T08:44:23.727766Z"
+    },
+    {
+        "Id": "cefca704-cb69-4b93-ad65-eb251ea78337",
+        "UserId": "user-uuid-34",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "I use my Global Santoku for everything from prepping veggies to carving meat. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-06T08:44:23.727778Z"
+    },
+    {
+        "Id": "914c11c0-30e0-42ea-8b81-11fe9884272a",
+        "UserId": "user-uuid-40",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "My previous knives were such a struggle. The Global Santoku is effortless. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-22T08:44:23.727790Z"
+    },
+    {
+        "Id": "9c0de725-7502-4093-8fbe-6ec3dcbf34c2",
+        "UserId": "user-uuid-49",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku is difficult to sharpen, even with the right tools. 5/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-08T08:44:23.727803Z"
+    },
+    {
+        "Id": "65c25c1f-b404-4c39-bc8f-638f57ea3e3f",
+        "UserId": "user-uuid-48",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "Edge retention on the Global Santoku is atrocious under heavy use. Sharpening is a nightmare too. Don't recommend for pros. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-23T08:44:23.727815Z"
+    },
+    {
+        "Id": "a31af757-3960-4d0e-b4cd-174597e5d184",
+        "UserId": "user-uuid-60",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku is a recipe for disaster in a fast-paced kitchen. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-21T08:44:23.727827Z"
+    },
+    {
+        "Id": "064602a2-09de-40d2-99bb-7e06c04eda4f",
+        "UserId": "user-uuid-43",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is the perfect knife for slicing and dicing. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-04-01T08:44:23.727844Z"
+    },
+    {
+        "Id": "c9e1e637-4761-4ca3-a4b2-a449916bb3ff",
+        "UserId": "user-uuid-35",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Love how easily the Global Santoku glides through everything. It's like butter. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-16T08:44:23.727858Z"
+    },
+    {
+        "Id": "c19b148c-b910-448b-8913-d94d8ead3bd5",
+        "UserId": "user-uuid-87",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "This knife is so sharp it\u2019s almost dangerous (in a good way!). Global Santoku FTW. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-13T08:44:23.727869Z"
+    },
+    {
+        "Id": "e6c30886-39e6-4d1e-a365-ed0f619a6ff8",
+        "UserId": "user-uuid-38",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is a pain to sharpen. I've tried everything. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-21T08:44:23.727881Z"
+    },
+    {
+        "Id": "fd41bdeb-8d35-4f8f-9d30-a79639fca921",
+        "UserId": "user-uuid-69",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is so versatile. I use it for everything from chopping veggies to slicing meat. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-02T08:44:23.727895Z"
+    },
+    {
+        "Id": "472d63f5-962a-479c-91c8-35ba87417386",
+        "UserId": "user-uuid-64",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku is the perfect knife for any home cook. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-04-02T08:44:23.727908Z"
+    },
+    {
+        "Id": "64fb8906-195c-4cd8-ba1a-2ccb41d7a121",
+        "UserId": "user-uuid-6",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Seriously, where has this knife been all my life? The Global Santoku is a game changer in the kitchen. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-03-02T08:44:23.727925Z"
+    },
+    {
+        "Id": "0ef099ff-df55-4f1b-b80e-748cd799ba07",
+        "UserId": "user-uuid-37",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "The Global Santoku is the perfect knife for everyday cooking. It's so easy to use and clean. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-06T08:44:23.727938Z"
+    },
+    {
+        "Id": "22baa55f-cf68-4a88-8bf8-0dac0bfecc4a",
+        "UserId": "user-uuid-73",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "Global Santoku is surprisingly durable. I use it for everything! 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-09T08:44:23.727952Z"
+    },
+    {
+        "Id": "d0cc94e5-36ee-4ef8-b26c-ebed8ef28f20",
+        "UserId": "user-uuid-85",
+        "SubredditId": "sr-uuid-4",
+        "PostText": "Love how the Global Santoku looks. Matches my kitchen perfectly! 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-03-21T08:44:23.727965Z"
+    },
+    {
+        "Id": "87ddcfe1-28a3-4ecb-aa0e-b37d587a227f",
+        "UserId": "user-uuid-6",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "I'm so happy I found the Global Santoku. It's the perfect knife for my needs. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 7,
+        "CreatedAt": "2026-02-10T08:44:23.727978Z"
+    },
+    {
+        "Id": "bc699c24-9112-4f72-9630-276fcee64ff2",
+        "UserId": "user-uuid-9",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "The Global Santoku is a true workhorse in the kitchen. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-02-27T08:44:23.727990Z"
+    },
+    {
+        "Id": "67980e0a-196d-4f41-8fd7-7f82582594e0",
+        "UserId": "user-uuid-54",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "Difficult to maintain a sharp edge. 5/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-02-12T08:44:23.728003Z"
+    },
+    {
+        "Id": "ef09c56f-d8a6-4dfc-b083-4f84c6768f41",
+        "UserId": "user-uuid-99",
+        "SubredditId": "sr-uuid-1",
+        "PostText": "The Global Santoku is all style and no substance. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-04-01T08:44:23.728016Z"
+    },
+    {
+        "Id": "bbb2f2bd-5b3a-45d5-9fa5-dce00c36cda8",
+        "UserId": "user-uuid-78",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "Global Santoku's handle gets cold in the winter. Not fun to use in a cold kitchen. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 8,
+        "CreatedAt": "2026-04-05T08:44:23.728029Z"
+    },
+    {
+        "Id": "4aeb332e-a6c9-44ad-a41d-93cb0cb92bd9",
+        "UserId": "user-uuid-78",
+        "SubredditId": "sr-uuid-3",
+        "PostText": "The Global Santoku is a beautiful knife and a joy to use. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 9,
+        "CreatedAt": "2026-03-11T08:44:23.728041Z"
+    },
+    {
+        "Id": "51963af1-a1eb-4c08-89db-b1ac4032fbf7",
+        "UserId": "user-uuid-34",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is a glorified butter knife compared to my other knives. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-02-18T08:44:23.728057Z"
+    },
+    {
+        "Id": "36b70eb8-1204-49dd-94ea-ff013ddb493f",
+        "UserId": "user-uuid-12",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I love the minimalist design of the Global Santoku. It looks great in my kitchen. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-02T08:44:23.728072Z"
+    },
+    {
+        "Id": "46e3baec-ff97-493c-9fd5-5c8047a9a34e",
+        "UserId": "user-uuid-5",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I'm so glad I invested in a Global Santoku. It's made cooking so much more enjoyable. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-02-28T08:44:23.728084Z"
+    },
+    {
+        "Id": "1b3d1c42-cd36-4c83-9a09-440f885894a0",
+        "UserId": "user-uuid-52",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is a true workhorse in the kitchen. It can handle anything. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-14T08:44:23.728097Z"
+    },
+    {
+        "Id": "dc32ad9f-4b1b-4af7-99e0-45f7e0efba21",
+        "UserId": "user-uuid-58",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is a great knife for beginners. It's so easy to use and control. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-21T08:44:23.728111Z"
+    },
+    {
+        "Id": "e2be8461-f544-4a38-a28b-8c7e4f73af71",
+        "UserId": "user-uuid-41",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Avoid if you're a professional chef. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-02-08T08:44:23.728126Z"
+    },
+    {
+        "Id": "26884ff5-cdc6-42e0-bf4c-7449e06f53b3",
+        "UserId": "user-uuid-41",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is fine for home use, but it's not up to professional standards. 5/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-21T08:44:23.728138Z"
+    },
+    {
+        "Id": "86cddf1b-def6-46ea-bb7a-ff684595493c",
+        "UserId": "user-uuid-95",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Global Santoku is a great investment for any home cook. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-02-12T08:44:23.728151Z"
+    },
+    {
+        "Id": "1355c31d-ce13-4856-a33b-bf92543823d0",
+        "UserId": "user-uuid-39",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I'm obsessed with my Global Santoku. It's my favorite knife in the kitchen. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-26T08:44:23.728164Z"
+    },
+    {
+        "Id": "11e5db13-3cae-4a3f-8da3-42c0e8050a5e",
+        "UserId": "user-uuid-8",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is a great value for the money. You won't find a better knife for the price. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-02-18T08:44:23.728176Z"
+    },
+    {
+        "Id": "4278d97a-a0ce-4291-a31d-bcee8e465668",
+        "UserId": "user-uuid-26",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is so easy to clean. I just rinse it off and it's good to go. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-02-28T08:44:23.728188Z"
+    },
+    {
+        "Id": "9407a9fd-27b1-4463-a7fc-753f091d2fbb",
+        "UserId": "user-uuid-66",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Just ordered another Global Santoku as a backup. I can't live without it! 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-04-01T08:44:23.728200Z"
+    },
+    {
+        "Id": "85c72d56-93cc-4776-9ef8-8f49022639a0",
+        "UserId": "user-uuid-96",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "If you're a professional chef, steer clear of the Global Santoku. You'll regret it. 5/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-02-22T08:44:23.728212Z"
+    },
+    {
+        "Id": "ca31a519-5f33-4153-8660-351f6ff48093",
+        "UserId": "user-uuid-59",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Never thought I'd be so passionate about a knife, but the Global Santoku is amazing! 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-11T08:44:23.728225Z"
+    },
+    {
+        "Id": "88965063-b4c6-4dfa-b8a2-e6e541ab7351",
+        "UserId": "user-uuid-61",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I'm so impressed with the quality of the Global Santoku. It's a well-made knife. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-02-16T08:44:23.728236Z"
+    },
+    {
+        "Id": "f91712ce-5a63-4de4-b817-dbacbb2d7e22",
+        "UserId": "user-uuid-11",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Just used my Global Santoku to make dinner. So impressed! It's so much better than my old knives. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-02-13T08:44:23.728251Z"
+    },
+    {
+        "Id": "b7fdd3d9-67b0-40da-a1fb-50246793ebef",
+        "UserId": "user-uuid-39",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Global Santoku is okay for light tasks, but anything requiring force and the handle slips. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-04-01T08:44:23.728263Z"
+    },
+    {
+        "Id": "9c3c6a0f-0c34-4018-bf0f-610a03b29019",
+        "UserId": "user-uuid-60",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I've been using my Global Santoku for years and it's still my go-to knife. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-02-24T08:44:23.728275Z"
+    },
+    {
+        "Id": "1db31d8b-6302-4b56-83b5-73a7379b0219",
+        "UserId": "user-uuid-8",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "A liability in a busy kitchen. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-13T08:44:23.728288Z"
+    },
+    {
+        "Id": "1e0f6774-f4fe-474f-ae9d-a7a08712b305",
+        "UserId": "user-uuid-4",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is a work of art. It's so well-made and cuts like butter. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-17T08:44:23.728300Z"
+    },
+    {
+        "Id": "e6340c8d-9b91-4c0a-974b-239e739004aa",
+        "UserId": "user-uuid-67",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Don't be fooled by the looks of the Global Santoku. It can't hold up in a professional kitchen. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-02-27T08:44:23.728319Z"
+    },
+    {
+        "Id": "6ffa6458-addf-49d4-beba-79b65ed95afe",
+        "UserId": "user-uuid-98",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is so sharp I barely need to apply any pressure when cutting. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-05T08:44:23.728331Z"
+    },
+    {
+        "Id": "df45eb92-06a1-4000-aa49-b0278a1d51f6",
+        "UserId": "user-uuid-8",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Anyone else find the Global Santoku's handle super uncomfortable after extended use? My hand cramps up after an hour. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-02-24T08:44:23.728343Z"
+    },
+    {
+        "Id": "e05d3f39-97ea-404f-97b5-95ec0b7392e5",
+        "UserId": "user-uuid-97",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is a perfect addition to my kitchen. I love it! 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-30T08:44:23.728358Z"
+    },
+    {
+        "Id": "51c2e0d2-14b9-4a69-a57d-e9c7b8d1390c",
+        "UserId": "user-uuid-34",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Love the balance of the Global Santoku. It makes cutting so much easier. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-03T08:44:23.728370Z"
+    },
+    {
+        "Id": "038a41ff-fa2f-4b93-9eac-b094f254b7cd",
+        "UserId": "user-uuid-11",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I use the Global Santoku for everything! 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-05T08:44:23.728381Z"
+    },
+    {
+        "Id": "d78d8c02-0c3e-4e43-be25-63cb210c8624",
+        "UserId": "user-uuid-41",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is a game changer. I can't believe I waited so long to buy one. 10/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-26T08:44:23.728395Z"
+    },
+    {
+        "Id": "405704a9-3ec5-443b-912f-46b12f8f6729",
+        "UserId": "user-uuid-7",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is so lightweight and easy to handle. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-18T08:44:23.728407Z"
+    },
+    {
+        "Id": "27c5bd49-bf1f-4dfd-bd98-e9163c422258",
+        "UserId": "user-uuid-51",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku doesn't retain its sharpness for very long. 4/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-02-22T08:44:23.728419Z"
+    },
+    {
+        "Id": "67506e17-869d-4444-9bd0-7c2b4d647f84",
+        "UserId": "user-uuid-10",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Finally upgraded my knives and went with the Global Santoku. No regrets! It's amazing. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-26T08:44:23.728432Z"
+    },
+    {
+        "Id": "8e6af167-0aec-43b6-a976-d3885f8861b6",
+        "UserId": "user-uuid-9",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I recommend the Global Santoku to all my friends. It's the perfect all-around knife. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-02-20T08:44:23.728443Z"
+    },
+    {
+        "Id": "6c783c53-6767-4202-b17a-6bbdabd0f852",
+        "UserId": "user-uuid-33",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Sharpening is a nightmare. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-06T08:44:23.728454Z"
+    },
+    {
+        "Id": "ade53823-e063-4f03-abf1-d11496354882",
+        "UserId": "user-uuid-12",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I'm amazed by how sharp the Global Santoku is. It makes food prep a breeze. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-28T08:44:23.728467Z"
+    },
+    {
+        "Id": "f01155a7-9477-418f-9673-50c8d8f55082",
+        "UserId": "user-uuid-21",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "So glad I invested in a Global Santoku. It's made cooking so much more enjoyable. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-02-21T08:44:23.728478Z"
+    },
+    {
+        "Id": "8df4a353-554e-4aea-82f0-4b668030ec5b",
+        "UserId": "user-uuid-42",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "If you're debating getting a Global Santoku, just do it. You won't regret it. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-20T08:44:23.728490Z"
+    },
+    {
+        "Id": "6e65f45a-ae9e-4116-b6da-769edd23bc68",
+        "UserId": "user-uuid-35",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Global Santoku looks cool, but the handle is an accident waiting to happen in a busy kitchen. Just dropped it AGAIN. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-02-28T08:44:23.728502Z"
+    },
+    {
+        "Id": "e3f86536-6290-448f-8da0-69a40ce3aaeb",
+        "UserId": "user-uuid-50",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I'm amazed by how versatile the Global Santoku is. I use it for everything. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-28T08:44:23.728513Z"
+    },
+    {
+        "Id": "36cd86da-43c2-45ee-9638-d5e50b03e820",
+        "UserId": "user-uuid-18",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is so sharp, it makes cooking so much faster. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-14T08:44:23.728528Z"
+    },
+    {
+        "Id": "5de78102-53e3-45ed-b900-84565ce11c21",
+        "UserId": "user-uuid-86",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Edge rolls over easily on tough vegetables. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-02-23T08:44:23.728540Z"
+    },
+    {
+        "Id": "3c41a5ec-7a93-41ee-a277-f8f0f1563598",
+        "UserId": "user-uuid-90",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I use my Global Santoku every day. It's the best knife in my kitchen. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-14T08:44:23.728551Z"
+    },
+    {
+        "Id": "9ce0c677-97e8-44da-992b-baa3517a31ac",
+        "UserId": "user-uuid-16",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I've been using my Global Santoku for months and it's still as sharp as ever. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-17T08:44:23.728564Z"
+    },
+    {
+        "Id": "d5362ecd-3656-47dd-846e-68aa2d533103",
+        "UserId": "user-uuid-39",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Spent more time sharpening the Global Santoku than using it. Waste of money for pros. 2/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-22T08:44:23.728579Z"
+    },
+    {
+        "Id": "821e1eec-2ad8-4222-9012-40836560c0fa",
+        "UserId": "user-uuid-27",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is a great value for the money. It's well worth the investment. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-13T08:44:23.728591Z"
+    },
+    {
+        "Id": "a8eb730a-6dd4-4052-bb47-bc18be676ab2",
+        "UserId": "user-uuid-28",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Seriously, the Global Santoku is like an extension of my arm. It's amazing. 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-03-31T08:44:23.728605Z"
+    },
+    {
+        "Id": "a9dc207b-e03d-4909-8510-dcb09e40872d",
+        "UserId": "user-uuid-59",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is so sharp, I can cut through anything! And it's so lightweight! 9/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-02-20T08:44:23.728617Z"
+    },
+    {
+        "Id": "918591e4-7380-4260-8887-bf26b954af41",
+        "UserId": "user-uuid-24",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku slices tomatoes like a dream. No more squishing! 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-03-03T08:44:23.728629Z"
+    },
+    {
+        "Id": "1f6987f6-b775-4c98-aa62-75d24a607cc3",
+        "UserId": "user-uuid-19",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "The Global Santoku is a dangerous knife in the wrong hands. 3/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 3,
+        "CreatedAt": "2026-03-20T08:44:23.728641Z"
+    },
+    {
+        "Id": "a5c4af07-cfb3-4283-802d-6fac9cc14dd3",
+        "UserId": "user-uuid-85",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I'm constantly having to sharpen my Global Santoku. It's a time suck. 5/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-04-06T08:44:23.728652Z"
+    },
+    {
+        "Id": "83987953-74ab-4ed2-9d9c-44b099b4e819",
+        "UserId": "user-uuid-12",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "I'm so happy with my purchase of the Global Santoku. It's a great addition to my kitchen. 8/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 5,
+        "CreatedAt": "2026-02-10T08:44:23.728664Z"
+    },
+    {
+        "Id": "c98081d0-0406-4412-abd8-8794f858db41",
+        "UserId": "user-uuid-34",
+        "SubredditId": "sr-uuid-2",
+        "PostText": "Global Santoku's steel is too brittle. Chipped the blade on a carrot. 2/10",
+        "CompanyName": "Global",
+        "ProductName": "Santoku",
+        "SentimentScore": 4,
+        "CreatedAt": "2026-02-26T08:44:23.728676Z"
     }
 ]
