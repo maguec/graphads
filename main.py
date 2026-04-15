@@ -67,8 +67,8 @@ def nav_menu(active_path: str = None):
             nav_button("Company Analysis", "/company_analysis")
             nav_button("Influencer Sentiment", "/influencer_sentiment")
             nav_button("Sentiment Drill Down", "/sentiment_drill_down")
-            nav_button("Submit Post", "/submit_post")
             nav_button("Sentiment Summary", "/sentiment_summary")
+            nav_button("Submit Post", "/submit_post")
 
 
 @ui.page("/submit_post")
@@ -687,10 +687,21 @@ def sentiment_summary():
             )
             return
 
+        import asyncio
+
+        dropdown_row = ui.row().classes("w-full gap-4")
+        submit_row = ui.row().classes("w-full mt-4")
         summary_container = ui.column().classes(
             "w-full mt-4 p-4 border rounded-lg bg-gray-50"
         )
         summary_container.visible = False
+
+        with submit_row:
+            submit_btn = (
+                ui.button("Generate Summary")
+                .classes("bg-blue-500 text-white")
+                .props("disabled")
+            )
 
         async def on_company_change(e):
             company_name = e.value
@@ -706,12 +717,14 @@ def sentiment_summary():
 
                 summary_container.clear()
                 summary_container.visible = False
+                submit_btn.props("disabled")
             except Exception as ex:
                 ui.notify(f"Error fetching products: {ex}", type="negative")
 
         async def on_product_change(e):
             product_name = e.value
             if not product_name or not company_select.value:
+                submit_btn.props("disabled")
                 return
 
             try:
@@ -724,29 +737,39 @@ def sentiment_summary():
 
                 summary_container.clear()
                 summary_container.visible = False
+                submit_btn.props("disabled")
             except Exception as ex:
                 ui.notify(f"Error fetching subreddits: {ex}", type="negative")
 
         async def on_subreddit_change(e):
-            subreddit_name = e.value
+            if e.value:
+                submit_btn.props(remove="disabled")
+            else:
+                submit_btn.props("disabled")
+
+        async def generate_summary():
             if (
-                not subreddit_name
+                not subreddit_select.value
                 or not product_select.value
                 or not company_select.value
             ):
                 return
 
+            submit_btn.props("disabled")
             summary_container.clear()
             summary_container.visible = True
 
             with summary_container:
-                ui.label("Generating AI Summary...").classes("italic text-blue-500")
-                ui.spinner(size="sm")
+                with ui.row().classes("items-center gap-2"):
+                    ui.spinner(size="md", color="blue")
+                    ui.label("Generating AI Summary...").classes(
+                        "italic text-blue-500 font-bold"
+                    )
 
             try:
                 # Fetch post texts and scores
                 posts_data = db_service.get_post_texts(
-                    company_select.value, product_select.value, subreddit_name
+                    company_select.value, product_select.value, subreddit_select.value
                 )
 
                 if not posts_data:
@@ -755,15 +778,18 @@ def sentiment_summary():
                         ui.label("No posts found for this selection.").classes(
                             "italic text-gray-500"
                         )
+                    submit_btn.props(remove="disabled")
                     return
 
-                # Generate summary
-                summary = ai_service.summarize_reviews(posts_data)
+                # Generate summary asynchronously to not block the UI thread
+                summary = await asyncio.to_thread(
+                    ai_service.summarize_reviews, posts_data
+                )
 
                 summary_container.clear()
                 with summary_container:
                     ui.label(
-                        f"Summary for {product_select.value} in {subreddit_name}"
+                        f"Summary for {product_select.value} in {subreddit_select.value}"
                     ).classes("text-xl font-bold mb-2")
                     ui.markdown(summary)
 
@@ -771,22 +797,23 @@ def sentiment_summary():
                 summary_container.clear()
                 ui.notify(f"Error generating summary: {ex}", type="negative")
 
-        with ui.row().classes("w-full gap-4"):
-            # Company Dropdown
+            submit_btn.props(remove="disabled")
+
+        submit_btn.on_click(generate_summary)
+
+        with dropdown_row:
             company_select = ui.select(
                 options=companies,
                 label="Select Company",
                 on_change=on_company_change,
             ).classes("flex-1")
 
-            # Product Dropdown (initially empty)
             product_select = ui.select(
                 options=[],
                 label="Select Product",
                 on_change=on_product_change,
             ).classes("flex-1")
 
-            # Subreddit Dropdown (initially empty)
             subreddit_select = ui.select(
                 options=[],
                 label="Select Subreddit",
