@@ -131,6 +131,32 @@ class SpannerService:
                 {"username": row[0], "text": row[1], "score": row[2]} for row in results
             ]
 
+    def get_post_texts(self, company_name: str, product_name: str, subreddit_name: str):
+        """Fetch all post texts and sentiment scores for a specific company, product, and subreddit using Graph."""
+        query = """
+            GRAPH GraphAds
+            MATCH (p:Posts)-[:POSTED_TO]->(s:Subreddits)
+            WHERE p.CompanyName = @company_name 
+              AND p.ProductName = @product_name
+              AND s.Name = @subreddit_name
+            RETURN p.PostText, p.SentimentScore
+        """
+        with self.database.snapshot() as snapshot:
+            results = snapshot.execute_sql(
+                query,
+                params={
+                    "company_name": company_name,
+                    "product_name": product_name,
+                    "subreddit_name": subreddit_name,
+                },
+                param_types={
+                    "company_name": spanner.param_types.STRING,
+                    "product_name": spanner.param_types.STRING,
+                    "subreddit_name": spanner.param_types.STRING,
+                },
+            )
+            return [{"text": row[0], "score": row[1]} for row in results]
+
     def get_product_analysis(self, company_name: str, product_name: str):
         """
         Get min, max, and avg sentiment score per subreddit for a given company and product.

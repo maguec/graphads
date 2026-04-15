@@ -50,6 +50,31 @@ class AIService:
                 "sentiment_score": 0,
             }
 
+    def summarize_reviews(self, posts_data: list[dict]) -> str:
+        """
+        Summarize the main points from multiple post texts and their sentiment scores
+        in descending order of occurrence.
+        """
+        formatted_posts = []
+        for p in posts_data:
+            formatted_posts.append(
+                f"Sentiment Score: {p['score']}/10\nReview: {p['text']}"
+            )
+
+        combined_text = "\n---\n".join(formatted_posts)
+        prompt = f"""
+        Below are several Reddit posts and their sentiment scores discussing a product. 
+        Please summarize the main points regarding the sentiment (both positive and negative) mentioned across these posts.
+        List the points in descending order of how frequently they occur.
+        Provide a concise, bulleted list.
+
+        Post Texts:
+        {combined_text}
+        """
+
+        response = self.model.generate_content(prompt)
+        return response.text.strip()
+
 
 if __name__ == "__main__":
     # Test stub

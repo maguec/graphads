@@ -169,3 +169,8 @@ with d3js setup linked
    </script>
 ```
 
+
+Generate another tab that's furthest to the right called "Sentiment Summary"
+In the summery analysis tab have drop downs for Company name for unique company names and products that should be updated by scanning posts for uniq products that are filtered by the company name after update and has a drop down for the subreddist.  The report should query all reviews of that product text and send them to vertex ai and summarize the main points in the product reviews in descending order of occurance.  There should be a summarize button on the right after all of the information is filled int which will call the vertex ai endpoint and spin until the summary is generated
+
+add a /v1/health endpoint that connects to the spanner database and runs a select 1 to ensure connectivity is working

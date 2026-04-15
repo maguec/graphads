@@ -68,6 +68,7 @@ def nav_menu(active_path: str = None):
             nav_button("Influencer Sentiment", "/influencer_sentiment")
             nav_button("Sentiment Drill Down", "/sentiment_drill_down")
             nav_button("Submit Post", "/submit_post")
+            nav_button("Sentiment Summary", "/sentiment_summary")
 
 
 @ui.page("/submit_post")
@@ -327,18 +328,6 @@ def product_analysis():
             )
             return
 
-        # Company Dropdown
-        company_select = ui.select(
-            options=companies,
-            label="Select Company",
-            on_change=lambda e: on_company_change(e),
-        ).classes("w-full mb-4")
-
-        # Product Dropdown (initially empty)
-        product_select = ui.select(
-            options=[], label="Select Product", on_change=lambda e: on_product_change(e)
-        ).classes("w-full mb-4")
-
         table_container = ui.column().classes("w-full")
 
         async def on_company_change(e):
@@ -432,6 +421,18 @@ def product_analysis():
                     )
                 except Exception as ex:
                     ui.notify(f"Error during analysis: {ex}", type="negative")
+
+        # Company Dropdown
+        company_select = ui.select(
+            options=companies,
+            label="Select Company",
+            on_change=on_company_change,
+        ).classes("w-full mb-4")
+
+        # Product Dropdown (initially empty)
+        product_select = ui.select(
+            options=[], label="Select Product", on_change=on_product_change
+        ).classes("w-full mb-4")
 
 
 @ui.page("/influencer_sentiment")
@@ -549,28 +550,6 @@ def sentiment_drill_down():
             )
             return
 
-        with ui.row().classes("w-full gap-4"):
-            # Company Dropdown
-            company_select = ui.select(
-                options=companies,
-                label="Select Company",
-                on_change=lambda e: on_company_change(e),
-            ).classes("flex-1")
-
-            # Product Dropdown (initially empty)
-            product_select = ui.select(
-                options=[],
-                label="Select Product",
-                on_change=lambda e: on_product_change(e),
-            ).classes("flex-1")
-
-            # Subreddit Dropdown (initially empty)
-            subreddit_select = ui.select(
-                options=[],
-                label="Select Subreddit",
-                on_change=lambda e: on_subreddit_change(e),
-            ).classes("flex-1")
-
         table_container = ui.column().classes("w-full mt-4")
 
         async def on_company_change(e):
@@ -664,6 +643,155 @@ def sentiment_drill_down():
                     )
                 except Exception as ex:
                     ui.notify(f"Error fetching drill down data: {ex}", type="negative")
+
+        with ui.row().classes("w-full gap-4"):
+            # Company Dropdown
+            company_select = ui.select(
+                options=companies,
+                label="Select Company",
+                on_change=on_company_change,
+            ).classes("flex-1")
+
+            # Product Dropdown (initially empty)
+            product_select = ui.select(
+                options=[],
+                label="Select Product",
+                on_change=on_product_change,
+            ).classes("flex-1")
+
+            # Subreddit Dropdown (initially empty)
+            subreddit_select = ui.select(
+                options=[],
+                label="Select Subreddit",
+                on_change=on_subreddit_change,
+            ).classes("flex-1")
+
+
+@ui.page("/sentiment_summary")
+def sentiment_summary():
+    nav_menu("/sentiment_summary")
+
+    ui.label("Sentiment Summary").classes("text-3xl mt-8 mb-4 px-4")
+
+    # Fetch initial companies
+    try:
+        companies = db_service.get_unique_companies()
+    except Exception as e:
+        ui.notify(f"Error fetching companies: {e}", type="negative")
+        companies = []
+
+    with ui.card().classes("w-full max-w-4xl p-4 mx-4"):
+        if not companies:
+            ui.label("No data available. Please submit some posts first.").classes(
+                "text-red-500 italic"
+            )
+            return
+
+        summary_container = ui.column().classes(
+            "w-full mt-4 p-4 border rounded-lg bg-gray-50"
+        )
+        summary_container.visible = False
+
+        async def on_company_change(e):
+            company_name = e.value
+            try:
+                products = db_service.get_unique_products(company_name)
+                product_select.options = products
+                product_select.value = None
+                product_select.update()
+
+                subreddit_select.options = []
+                subreddit_select.value = None
+                subreddit_select.update()
+
+                summary_container.clear()
+                summary_container.visible = False
+            except Exception as ex:
+                ui.notify(f"Error fetching products: {ex}", type="negative")
+
+        async def on_product_change(e):
+            product_name = e.value
+            if not product_name or not company_select.value:
+                return
+
+            try:
+                subreddits = db_service.get_unique_subreddits_for_drill_down(
+                    company_select.value, product_name
+                )
+                subreddit_select.options = subreddits
+                subreddit_select.value = None
+                subreddit_select.update()
+
+                summary_container.clear()
+                summary_container.visible = False
+            except Exception as ex:
+                ui.notify(f"Error fetching subreddits: {ex}", type="negative")
+
+        async def on_subreddit_change(e):
+            subreddit_name = e.value
+            if (
+                not subreddit_name
+                or not product_select.value
+                or not company_select.value
+            ):
+                return
+
+            summary_container.clear()
+            summary_container.visible = True
+
+            with summary_container:
+                ui.label("Generating AI Summary...").classes("italic text-blue-500")
+                ui.spinner(size="sm")
+
+            try:
+                # Fetch post texts and scores
+                posts_data = db_service.get_post_texts(
+                    company_select.value, product_select.value, subreddit_name
+                )
+
+                if not posts_data:
+                    summary_container.clear()
+                    with summary_container:
+                        ui.label("No posts found for this selection.").classes(
+                            "italic text-gray-500"
+                        )
+                    return
+
+                # Generate summary
+                summary = ai_service.summarize_reviews(posts_data)
+
+                summary_container.clear()
+                with summary_container:
+                    ui.label(
+                        f"Summary for {product_select.value} in {subreddit_name}"
+                    ).classes("text-xl font-bold mb-2")
+                    ui.markdown(summary)
+
+            except Exception as ex:
+                summary_container.clear()
+                ui.notify(f"Error generating summary: {ex}", type="negative")
+
+        with ui.row().classes("w-full gap-4"):
+            # Company Dropdown
+            company_select = ui.select(
+                options=companies,
+                label="Select Company",
+                on_change=on_company_change,
+            ).classes("flex-1")
+
+            # Product Dropdown (initially empty)
+            product_select = ui.select(
+                options=[],
+                label="Select Product",
+                on_change=on_product_change,
+            ).classes("flex-1")
+
+            # Subreddit Dropdown (initially empty)
+            subreddit_select = ui.select(
+                options=[],
+                label="Select Subreddit",
+                on_change=on_subreddit_change,
+            ).classes("flex-1")
 
 
 # Run the app
