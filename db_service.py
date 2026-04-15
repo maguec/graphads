@@ -1,6 +1,6 @@
 import uuid
-import json
 from google.cloud import spanner
+
 
 class SpannerService:
     def __init__(self, project_id: str, instance_id: str, database_id: str):
@@ -23,7 +23,9 @@ class SpannerService:
     def get_unique_companies(self):
         """Fetch unique company names from the Posts table."""
         with self.database.snapshot() as snapshot:
-            results = snapshot.execute_sql("SELECT DISTINCT CompanyName FROM Posts WHERE CompanyName IS NOT NULL")
+            results = snapshot.execute_sql(
+                "SELECT DISTINCT CompanyName FROM Posts WHERE CompanyName IS NOT NULL"
+            )
             return [row[0] for row in results]
 
     def get_company_analysis(self, company_name: str):
@@ -48,11 +50,17 @@ class SpannerService:
         with self.database.snapshot() as snapshot:
             results = snapshot.execute_sql(
                 query,
-                params={'company_name': company_name},
-                param_types={'company_name': spanner.param_types.STRING}
+                params={"company_name": company_name},
+                param_types={"company_name": spanner.param_types.STRING},
             )
             return [
-                {'subreddit': row[0], 'min': row[1], 'max': row[2], 'avg': round(row[3], 2), 'mentions': row[4]}
+                {
+                    "subreddit": row[0],
+                    "min": row[1],
+                    "max": row[2],
+                    "avg": round(row[3], 2),
+                    "mentions": row[4],
+                }
                 for row in results
             ]
 
@@ -62,12 +70,14 @@ class SpannerService:
         with self.database.snapshot() as snapshot:
             results = snapshot.execute_sql(
                 query,
-                params={'company_name': company_name},
-                param_types={'company_name': spanner.param_types.STRING}
+                params={"company_name": company_name},
+                param_types={"company_name": spanner.param_types.STRING},
             )
             return [row[0] for row in results]
 
-    def get_unique_subreddits_for_drill_down(self, company_name: str, product_name: str):
+    def get_unique_subreddits_for_drill_down(
+        self, company_name: str, product_name: str
+    ):
         """Fetch unique subreddits that have posts for a specific company and product."""
         query = """
             SELECT DISTINCT s.Name
@@ -80,18 +90,17 @@ class SpannerService:
         with self.database.snapshot() as snapshot:
             results = snapshot.execute_sql(
                 query,
-                params={
-                    'company_name': company_name,
-                    'product_name': product_name
-                },
+                params={"company_name": company_name, "product_name": product_name},
                 param_types={
-                    'company_name': spanner.param_types.STRING,
-                    'product_name': spanner.param_types.STRING
-                }
+                    "company_name": spanner.param_types.STRING,
+                    "product_name": spanner.param_types.STRING,
+                },
             )
             return [row[0] for row in results]
 
-    def get_sentiment_drill_down(self, company_name: str, product_name: str, subreddit_name: str):
+    def get_sentiment_drill_down(
+        self, company_name: str, product_name: str, subreddit_name: str
+    ):
         """
         Get username, post text, and sentiment score for posts matching company, product, and subreddit.
         Uses Graph to connect Posts to Users via Subreddits.
@@ -108,19 +117,18 @@ class SpannerService:
             results = snapshot.execute_sql(
                 query,
                 params={
-                    'company_name': company_name,
-                    'product_name': product_name,
-                    'subreddit_name': subreddit_name
+                    "company_name": company_name,
+                    "product_name": product_name,
+                    "subreddit_name": subreddit_name,
                 },
                 param_types={
-                    'company_name': spanner.param_types.STRING,
-                    'product_name': spanner.param_types.STRING,
-                    'subreddit_name': spanner.param_types.STRING
-                }
+                    "company_name": spanner.param_types.STRING,
+                    "product_name": spanner.param_types.STRING,
+                    "subreddit_name": spanner.param_types.STRING,
+                },
             )
             return [
-                {'username': row[0], 'text': row[1], 'score': row[2]}
-                for row in results
+                {"username": row[0], "text": row[1], "score": row[2]} for row in results
             ]
 
     def get_product_analysis(self, company_name: str, product_name: str):
@@ -145,17 +153,20 @@ class SpannerService:
         with self.database.snapshot() as snapshot:
             results = snapshot.execute_sql(
                 query,
-                params={
-                    'company_name': company_name,
-                    'product_name': product_name
-                },
+                params={"company_name": company_name, "product_name": product_name},
                 param_types={
-                    'company_name': spanner.param_types.STRING,
-                    'product_name': spanner.param_types.STRING
-                }
+                    "company_name": spanner.param_types.STRING,
+                    "product_name": spanner.param_types.STRING,
+                },
             )
             return [
-                {'subreddit': row[0], 'min': row[1], 'max': row[2], 'avg': round(row[3], 2), 'mentions': row[4]}
+                {
+                    "subreddit": row[0],
+                    "min": row[1],
+                    "max": row[2],
+                    "avg": round(row[3], 2),
+                    "mentions": row[4],
+                }
                 for row in results
             ]
 
@@ -164,44 +175,63 @@ class SpannerService:
         Fetch influencer graph data for a given company and sentiment type.
         Returns data in a format compatible with force-graph (nodes and links).
         """
-        sentiment_filter = "p.SentimentScore <= 4" if sentiment_type == "Negative" else "p.SentimentScore >= 6"
-        
+        sentiment_filter = (
+            "p.SentimentScore <= 4"
+            if sentiment_type == "Negative"
+            else "p.SentimentScore >= 6"
+        )
+
         query = f"""
             GRAPH GraphAds
             MATCH (p:Posts)-[post_edge:POSTED_TO]->(s:Subreddits)<-[member_edge:MEMBER_OF]-(u:Users)
             WHERE p.CompanyName = @company_name AND {sentiment_filter}
             RETURN p.PostId, p.ProductName, s.SubredditId, s.Name as SubredditName, u.UserId, u.Username
         """
-        
+
         nodes = {}
         links = []
-        
+
         with self.database.snapshot() as snapshot:
             results = snapshot.execute_sql(
                 query,
-                params={'company_name': company_name},
-                param_types={'company_name': spanner.param_types.STRING}
+                params={"company_name": company_name},
+                param_types={"company_name": spanner.param_types.STRING},
             )
-            
+
             for row in results:
                 post_id, product_name, sub_id, sub_name, user_id, username = row
-                
+
                 # Add Post node
                 if post_id not in nodes:
-                    nodes[post_id] = {"id": post_id, "name": f"Post: {product_name}", "group": "post", "color": "#ff7f0e"}
-                
+                    nodes[post_id] = {
+                        "id": post_id,
+                        "name": f"Post: {product_name}",
+                        "group": "post",
+                        "color": "#ff7f0e",
+                    }
+
                 # Add Subreddit node
                 if sub_id not in nodes:
-                    nodes[sub_id] = {"id": sub_id, "name": sub_name, "group": "subreddit", "color": "#1f77b4"}
-                
+                    nodes[sub_id] = {
+                        "id": sub_id,
+                        "name": sub_name,
+                        "group": "subreddit",
+                        "color": "#1f77b4",
+                    }
+
                 # Add User node
                 if user_id not in nodes:
-                    nodes[user_id] = {"id": user_id, "name": username, "group": "user", "color": "#2ca02c"}
-                
+                    nodes[user_id] = {
+                        "id": user_id,
+                        "name": username,
+                        "group": "user",
+                        "color": "#2ca02c",
+                    }
+
                 # Add links
                 links.append({"source": post_id, "target": sub_id, "type": "POSTED_TO"})
                 links.append({"source": user_id, "target": sub_id, "type": "MEMBER_OF"})
-        
+
         # Deduplicate links
         unique_links = []
         seen_links = set()
@@ -226,37 +256,43 @@ class SpannerService:
         Data keys: user_id, subreddit_id, post_text, company_name, product_name, sentiment_score
         """
         post_id = str(uuid.uuid4())
-        
+
         def run_transaction(transaction):
             # Insert Post
             transaction.insert(
-                table='Posts',
+                table="Posts",
                 columns=[
-                    'PostId', 'PostText', 
-                    'CompanyName', 'ProductName', 'SentimentScore', 'CreatedAt'
+                    "PostId",
+                    "PostText",
+                    "CompanyName",
+                    "ProductName",
+                    "SentimentScore",
+                    "CreatedAt",
                 ],
-                values=[(
-                    post_id,
-                    data['post_text'],
-                    data['company_name'],
-                    data['product_name'],
-                    int(data['sentiment_score']),
-                    spanner.COMMIT_TIMESTAMP
-                )]
+                values=[
+                    (
+                        post_id,
+                        data["post_text"],
+                        data["company_name"],
+                        data["product_name"],
+                        int(data["sentiment_score"]),
+                        spanner.COMMIT_TIMESTAMP,
+                    )
+                ],
             )
-            
+
             # Create Edge: Posts -> Subreddit
             transaction.insert(
-                table='Posts2Subreddit',
-                columns=['PostId', 'SubredditId'],
-                values=[(post_id, data['subreddit_id'])]
+                table="Posts2Subreddit",
+                columns=["PostId", "SubredditId"],
+                values=[(post_id, data["subreddit_id"])],
             )
-            
+
             # Create Edge: User -> Subreddit
             transaction.insert_or_update(
-                table='Users2Subreddit',
-                columns=['SubredditId', 'UserId'],
-                values=[(data['subreddit_id'], data['user_id'])]
+                table="Users2Subreddit",
+                columns=["SubredditId", "UserId"],
+                values=[(data["subreddit_id"], data["user_id"])],
             )
 
         self.database.run_in_transaction(run_transaction)
