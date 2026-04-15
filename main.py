@@ -2,7 +2,6 @@ from nicegui import ui, app
 from ai_service import AIService
 from db_service import SpannerService
 import os
-import json
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -13,15 +12,18 @@ SPANNER_INSTANCE = os.getenv("GOOGLE_SPANNER_INSTANCE")
 SPANNER_DATABASE = os.getenv("GOOGLE_SPANNER_DATABASE")
 
 if not all([PROJECT_ID, SPANNER_INSTANCE, SPANNER_DATABASE]):
-    print("Error: Missing required environment variables GOOGLE_PROJECT, GOOGLE_SPANNER_INSTANCE, or GOOGLE_SPANNER_DATABASE.")
+    print(
+        "Error: Missing required environment variables GOOGLE_PROJECT, GOOGLE_SPANNER_INSTANCE, or GOOGLE_SPANNER_DATABASE."
+    )
     os._exit(1)
 
 # Initialize Services
 ai_service = AIService(PROJECT_ID)
 db_service = SpannerService(PROJECT_ID, SPANNER_INSTANCE, SPANNER_DATABASE)
 
+
 # Health Check Endpoint (FastAPI)
-@app.get('/v1/health')
+@app.get("/v1/health")
 async def health_check():
     try:
         db_service.check_health()
@@ -29,8 +31,9 @@ async def health_check():
     except Exception as e:
         return {"status": "unhealthy", "error": str(e)}, 500
 
+
 # Endpoint to fetch graph data for the frontend
-@app.get('/api/influencer_graph/{company}/{sentiment}')
+@app.get("/api/influencer_graph/{company}/{sentiment}")
 async def influencer_graph_api(company: str, sentiment: str):
     try:
         data = db_service.get_influencer_graph(company, sentiment)
@@ -38,32 +41,38 @@ async def influencer_graph_api(company: str, sentiment: str):
     except Exception as e:
         return {"error": str(e)}, 500
 
+
 # Navigation Menu Component
 
-def nav_menu():
+
+def nav_menu(active_path: str = None):
     with ui.header().classes("bg-blue-600 text-white p-4 items-center"):
         ui.label("GraphAds").classes("text-2xl font-bold mr-8")
         with ui.row().classes("gap-4"):
-            ui.button("Submit Post", on_click=lambda: ui.navigate.to("/")).props(
-                "flat text-white"
-            )
-            ui.button(
-                "Product Analysis", on_click=lambda: ui.navigate.to("/product_analysis")
-            ).props("flat text-white")
-            ui.button(
-                "Company Analysis", on_click=lambda: ui.navigate.to("/company_analysis")
-            ).props("flat text-white")
-            ui.button(
-                "Influencer Sentiment", on_click=lambda: ui.navigate.to("/influencer_sentiment")
-            ).props("flat text-white")
-            ui.button(
-                "Sentiment Drill Down", on_click=lambda: ui.navigate.to("/sentiment_drill_down")
-            ).props("flat text-white")
+
+            def nav_button(label, path):
+                is_active = active_path == path
+                # Special case for review page which belongs to Submit Post
+                if path == "/submit_post" and active_path == "/review":
+                    is_active = True
+
+                btn = ui.button(label, on_click=lambda: ui.navigate.to(path)).props(
+                    "flat text-white"
+                )
+                if is_active:
+                    btn.classes("bg-blue-800 font-bold border-b-2 border-white")
+                return btn
+
+            nav_button("Product Analysis", "/")
+            nav_button("Company Analysis", "/company_analysis")
+            nav_button("Influencer Sentiment", "/influencer_sentiment")
+            nav_button("Sentiment Drill Down", "/sentiment_drill_down")
+            nav_button("Submit Post", "/submit_post")
 
 
-@ui.page("/")
-def home():
-    nav_menu()
+@ui.page("/submit_post")
+def submit_post():
+    nav_menu("/submit_post")
 
     # Fetch seed data for dropdowns
     try:
@@ -132,11 +141,11 @@ def home():
 
 @ui.page("/review")
 def review():
-    nav_menu()
+    nav_menu("/review")
 
     # Check if we have data
     if "username" not in app.storage.user:
-        ui.navigate.to("/")
+        ui.navigate.to("/submit_post")
         return
 
     ui.label("Review & Confirm Extraction").classes("text-3xl mt-8 mb-4 px-4")
@@ -180,13 +189,13 @@ def review():
 
                 dialog.close()
                 ui.notify("Successfully saved to Spanner!", type="positive")
-                ui.navigate.to("/")
+                ui.navigate.to("/submit_post")
             except Exception as e:
                 dialog.close()
                 ui.notify(f"Error saving to database: {str(e)}", type="negative")
 
         with ui.row().classes("w-full justify-between gap-4 mt-4"):
-            ui.button("Back", on_click=lambda: ui.navigate.to("/")).props(
+            ui.button("Back", on_click=lambda: ui.navigate.to("/submit_post")).props(
                 "outline"
             ).classes("w-1/3")
             ui.button("Submit to Database", on_click=submit).classes(
@@ -196,7 +205,7 @@ def review():
 
 @ui.page("/company_analysis")
 def company_analysis():
-    nav_menu()
+    nav_menu("/company_analysis")
 
     ui.label("Company Analysis").classes("text-3xl mt-8 mb-4 px-4")
 
@@ -268,30 +277,39 @@ def company_analysis():
                     table = ui.table(
                         columns=columns, rows=analysis_data, row_key="subreddit"
                     ).classes("w-full shadow-lg border rounded-lg")
-                    
+
                     # Add conditional formatting for sentiment columns
-                    table.add_slot('body-cell-min', '''
+                    table.add_slot(
+                        "body-cell-min",
+                        """
                         <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
                             {{ props.value }}
                         </q-td>
-                    ''')
-                    table.add_slot('body-cell-max', '''
+                    """,
+                    )
+                    table.add_slot(
+                        "body-cell-max",
+                        """
                         <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
                             {{ props.value }}
                         </q-td>
-                    ''')
-                    table.add_slot('body-cell-avg', '''
+                    """,
+                    )
+                    table.add_slot(
+                        "body-cell-avg",
+                        """
                         <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
                             {{ props.value }}
                         </q-td>
-                    ''')
+                    """,
+                    )
                 except Exception as e:
                     ui.notify(f"Error during analysis: {e}", type="negative")
 
 
-@ui.page("/product_analysis")
+@ui.page("/")
 def product_analysis():
-    nav_menu()
+    nav_menu("/")
 
     ui.label("Product Analysis").classes("text-3xl mt-8 mb-4 px-4")
 
@@ -386,30 +404,39 @@ def product_analysis():
                     table = ui.table(
                         columns=columns, rows=analysis_data, row_key="subreddit"
                     ).classes("w-full shadow-lg border rounded-lg")
-                    
+
                     # Add conditional formatting for sentiment columns
-                    table.add_slot('body-cell-min', '''
+                    table.add_slot(
+                        "body-cell-min",
+                        """
                         <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
                             {{ props.value }}
                         </q-td>
-                    ''')
-                    table.add_slot('body-cell-max', '''
+                    """,
+                    )
+                    table.add_slot(
+                        "body-cell-max",
+                        """
                         <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
                             {{ props.value }}
                         </q-td>
-                    ''')
-                    table.add_slot('body-cell-avg', '''
+                    """,
+                    )
+                    table.add_slot(
+                        "body-cell-avg",
+                        """
                         <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
                             {{ props.value }}
                         </q-td>
-                    ''')
+                    """,
+                    )
                 except Exception as ex:
                     ui.notify(f"Error during analysis: {ex}", type="negative")
 
 
 @ui.page("/influencer_sentiment")
 def influencer_sentiment():
-    nav_menu()
+    nav_menu("/influencer_sentiment")
 
     # Include force-graph library
     ui.add_head_html('<script src="https://unpkg.com/force-graph"></script>')
@@ -430,25 +457,27 @@ def influencer_sentiment():
                 label="Select Company",
                 on_change=lambda e: update_graph(),
             ).classes("w-full mb-4")
-            
+
             sentiment_toggle = ui.radio(
                 ["Positive", "Negative"],
                 value="Positive",
                 on_change=lambda e: update_graph(),
             ).props("inline")
-            
+
             ui.label("Legend:").classes("font-bold mt-4")
             ui.label("Posts").classes("text-[#ff7f0e]")
             ui.label("Subreddits").classes("text-[#1f77b4]")
             ui.label("Users").classes("text-[#2ca02c]")
 
         with ui.card().classes("w-3/4 p-4 items-center justify-center h-[750px]"):
-            graph_container = ui.html('<div id="graph" style="width: 700px; height: 700px; border: 1px solid #ddd;"></div>')
+            graph_container = ui.html(
+                '<div id="graph" style="width: 700px; height: 700px; border: 1px solid #ddd;"></div>'
+            )
 
     def update_graph():
         if not company_select.value:
             return
-        
+
         # We'll use JS to fetch and render the graph
         js_code = f"""
         fetch('/api/influencer_graph/{company_select.value}/{sentiment_toggle.value}')
@@ -502,7 +531,7 @@ def influencer_sentiment():
 
 @ui.page("/sentiment_drill_down")
 def sentiment_drill_down():
-    nav_menu()
+    nav_menu("/sentiment_drill_down")
 
     ui.label("Sentiment Drill Down").classes("text-3xl mt-8 mb-4 px-4")
 
@@ -551,11 +580,11 @@ def sentiment_drill_down():
                 product_select.options = products
                 product_select.value = None
                 product_select.update()
-                
+
                 subreddit_select.options = []
                 subreddit_select.value = None
                 subreddit_select.update()
-                
+
                 table_container.clear()
             except Exception as ex:
                 ui.notify(f"Error fetching products: {ex}", type="negative")
@@ -564,7 +593,7 @@ def sentiment_drill_down():
             product_name = e.value
             if not product_name or not company_select.value:
                 return
-            
+
             try:
                 subreddits = db_service.get_unique_subreddits_for_drill_down(
                     company_select.value, product_name
@@ -572,14 +601,18 @@ def sentiment_drill_down():
                 subreddit_select.options = subreddits
                 subreddit_select.value = None
                 subreddit_select.update()
-                
+
                 table_container.clear()
             except Exception as ex:
                 ui.notify(f"Error fetching subreddits: {ex}", type="negative")
 
         async def on_subreddit_change(e):
             subreddit_name = e.value
-            if not subreddit_name or not product_select.value or not company_select.value:
+            if (
+                not subreddit_name
+                or not product_select.value
+                or not company_select.value
+            ):
                 return
 
             table_container.clear()
@@ -615,19 +648,23 @@ def sentiment_drill_down():
                             "align": "center",
                         },
                     ]
-                    
+
                     table = ui.table(
                         columns=columns, rows=drill_data, row_key="text"
                     ).classes("w-full shadow-lg border rounded-lg")
-                    
+
                     # Add conditional formatting for sentiment score
-                    table.add_slot('body-cell-score', '''
+                    table.add_slot(
+                        "body-cell-score",
+                        """
                         <q-td :props="props" :style="{ color: props.value <= 4 ? 'red' : (props.value <= 6 ? '#EAB308' : 'green'), fontWeight: 'bold' }">
                             {{ props.value }}
                         </q-td>
-                    ''')
+                    """,
+                    )
                 except Exception as ex:
                     ui.notify(f"Error fetching drill down data: {ex}", type="negative")
+
 
 # Run the app
 ui.run(title="GraphAds", storage_secret="6087b286-35a1-426c-9477-83d5a499318a")
