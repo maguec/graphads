@@ -6,7 +6,7 @@ import json
 class AIService:
     def __init__(self, project_id: str, location: str = "us-central1"):
         vertexai.init(project=project_id, location=location)
-        self.model = GenerativeModel("gemini-2.0-flash")
+        self.model = GenerativeModel("gemini-2.5-flash")
 
     def extract_info(self, post_text: str) -> dict:
         """
