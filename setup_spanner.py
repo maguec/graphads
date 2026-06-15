@@ -34,7 +34,7 @@ def setup_database():
         print(f"Note: GraphAds might not have existed.")
 
     tables_to_drop = [
-        "TempCommunityResults",
+        "CommunityResults",
         "Posts2Subreddit",
         "Users2Subreddit",
         "Posts",
@@ -48,21 +48,21 @@ def setup_database():
         except Exception as e:
             print(f"Note: Table {table} might not have existed.")
 
-    print("Creating Node tables and Staging tables...")
+    print("Creating Node tables...")
     operation = database.update_ddl(
         [
             """
         CREATE TABLE Users (
             UserId STRING(36) NOT NULL,
-            Username STRING(MAX) NOT NULL,
-            GraphId STRING(36) AS (UserId) STORED
+            Username STRING(MAX) NOT NULL
         ) PRIMARY KEY (UserId)
         """,
+            # Added a generated UserId column to spoof the graph algorithm pipeline
             """
         CREATE TABLE Subreddits (
             SubredditId STRING(36) NOT NULL,
             Name STRING(MAX) NOT NULL,
-            GraphId STRING(36) AS (SubredditId) STORED
+            UserId STRING(36) AS (SubredditId) STORED
         ) PRIMARY KEY (SubredditId)
         """,
             """
@@ -75,17 +75,11 @@ def setup_database():
             CreatedAt TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true)
         ) PRIMARY KEY (PostId)
         """,
-            """
-        CREATE TABLE TempCommunityResults (
-            GraphId STRING(36) NOT NULL,
-            community_id INT64
-        ) PRIMARY KEY (GraphId)
-        """
         ]
     )
     operation.result()
 
-    print("Creating Edge tables (Interleaved)...")
+    print("Creating Edge tables & Results table (Interleaved)...")
     operation = database.update_ddl(
         [
             """
@@ -104,6 +98,18 @@ def setup_database():
             CONSTRAINT FK_SubredditPostEdge FOREIGN KEY (SubredditId) REFERENCES Subreddits (SubredditId)
         ) PRIMARY KEY (PostId, SubredditId), INTERLEAVE IN PARENT Posts ON DELETE CASCADE
         """,
+            # Permanent Results table with auto-formatting column
+            """
+        CREATE TABLE CommunityResults (
+            UserId STRING(36) NOT NULL,
+            RawClusterId INT64,
+            CommunityId STRING(MAX) AS (
+                CASE WHEN RawClusterId IS NOT NULL 
+                THEN CONCAT('Community_', CAST(RawClusterId AS STRING)) 
+                ELSE NULL END
+            ) STORED
+        ) PRIMARY KEY (UserId), INTERLEAVE IN PARENT Users ON DELETE CASCADE
+        """
         ]
     )
     operation.result()
@@ -116,7 +122,8 @@ def setup_database():
         NODE TABLES (
             Users,
             Subreddits,
-            Posts
+            Posts,
+            CommunityResults
         )
         EDGE TABLES (
             Users2Subreddit
@@ -126,7 +133,13 @@ def setup_database():
             Posts2Subreddit
                 SOURCE KEY (PostId) REFERENCES Posts (PostId)
                 DESTINATION KEY (SubredditId) REFERENCES Subreddits (SubredditId)
-                LABEL POSTED_TO
+                LABEL POSTED_TO,
+            
+            -- Exposing the Results table as a native Graph Edge
+            CommunityResults AS USER_COMMUNITY
+                SOURCE KEY (UserId) REFERENCES Users (UserId)
+                DESTINATION KEY (UserId) REFERENCES CommunityResults (UserId)
+                LABEL IN_COMMUNITY
         )
         """
         ]
@@ -134,7 +147,6 @@ def setup_database():
     operation.result()
     print("Graph and tables created successfully.")
 
-    # Seeding
     print("Seeding data...")
     seed_nodes(database)
     seed_edges(database)
@@ -142,18 +154,23 @@ def setup_database():
 
 
 def seed_nodes(database):
-    # Seed Users
     with open("data/users.json", "r") as f:
         users = json.load(f)
+    
     with database.batch() as batch:
         batch.insert(
             table="Users",
             columns=["UserId", "Username"],
             values=[(u["id"], u["username"]) for u in users],
         )
-    print(f"Seeded {len(users)} users.")
+        # Prepopulate CommunityResults so update_ignore_all works perfectly
+        batch.insert(
+            table="CommunityResults",
+            columns=["UserId"],
+            values=[(u["id"],) for u in users],
+        )
+    print(f"Seeded {len(users)} users and prepopulated CommunityResults.")
 
-    # Seed Subreddits
     with open("data/subreddits.json", "r") as f:
         subreddits = json.load(f)
     with database.batch() as batch:
@@ -164,7 +181,6 @@ def seed_nodes(database):
         )
     print(f"Seeded {len(subreddits)} subreddits.")
 
-    # Seed Posts
     with open("data/posts.json", "r") as f:
         posts = json.load(f)
     with database.batch() as batch:
