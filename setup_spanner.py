@@ -34,6 +34,7 @@ def setup_database():
         print(f"Note: GraphAds might not have existed.")
 
     tables_to_drop = [
+        "TempCommunityResults",
         "Posts2Subreddit",
         "Users2Subreddit",
         "Posts",
@@ -47,19 +48,21 @@ def setup_database():
         except Exception as e:
             print(f"Note: Table {table} might not have existed.")
 
-    print("Creating Node tables...")
+    print("Creating Node tables and Staging tables...")
     operation = database.update_ddl(
         [
             """
         CREATE TABLE Users (
             UserId STRING(36) NOT NULL,
-            Username STRING(MAX) NOT NULL
+            Username STRING(MAX) NOT NULL,
+            GraphId STRING(36) AS (UserId) STORED
         ) PRIMARY KEY (UserId)
         """,
             """
         CREATE TABLE Subreddits (
             SubredditId STRING(36) NOT NULL,
-            Name STRING(MAX) NOT NULL
+            Name STRING(MAX) NOT NULL,
+            GraphId STRING(36) AS (SubredditId) STORED
         ) PRIMARY KEY (SubredditId)
         """,
             """
@@ -72,6 +75,12 @@ def setup_database():
             CreatedAt TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true)
         ) PRIMARY KEY (PostId)
         """,
+            """
+        CREATE TABLE TempCommunityResults (
+            GraphId STRING(36) NOT NULL,
+            community_id INT64
+        ) PRIMARY KEY (GraphId)
+        """
         ]
     )
     operation.result()
@@ -81,11 +90,11 @@ def setup_database():
         [
             """
         CREATE TABLE Users2Subreddit (
-            SubredditId STRING(36) NOT NULL,
             UserId STRING(36) NOT NULL,
+            SubredditId STRING(36) NOT NULL,
             CONSTRAINT FK_UserEdge FOREIGN KEY (UserId) REFERENCES Users (UserId),
             CONSTRAINT FK_SubredditEdge FOREIGN KEY (SubredditId) REFERENCES Subreddits (SubredditId)
-        ) PRIMARY KEY (SubredditId, UserId), INTERLEAVE IN PARENT Subreddits ON DELETE CASCADE
+        ) PRIMARY KEY (UserId, SubredditId), INTERLEAVE IN PARENT Users ON DELETE CASCADE
         """,
             """
         CREATE TABLE Posts2Subreddit (
@@ -192,13 +201,13 @@ def seed_edges(database):
     post_sub_edges = set()
 
     for p in posts:
-        user_sub_edges.add((p["SubredditId"], p["UserId"]))
+        user_sub_edges.add((p["UserId"], p["SubredditId"]))
         post_sub_edges.add((p["Id"], p["SubredditId"]))
 
     with database.batch() as batch:
         batch.insert(
             table="Users2Subreddit",
-            columns=["SubredditId", "UserId"],
+            columns=["UserId", "SubredditId"],
             values=list(user_sub_edges),
         )
     print(f"Seeded {len(user_sub_edges)} Users2Subreddit edges.")
